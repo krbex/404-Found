@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,8 +8,9 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
+
+import SiteContainer from "./components/SiteContainer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -36,8 +37,7 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
-            <Routes></Routes>
+            <SiteContainer />
           </StoreProvider>
         </div>
       </Router>
