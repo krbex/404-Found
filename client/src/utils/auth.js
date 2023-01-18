@@ -1,7 +1,5 @@
-import decode from 'jwt-decode';
+import decode from "jwt-decode";
 
-class AuthService {
-
-}
+class AuthService {}
 
 export default new AuthService();

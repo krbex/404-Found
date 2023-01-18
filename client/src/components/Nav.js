@@ -36,22 +36,12 @@ export default function Nav({ currentPage, handlePageChange }) {
       </p>
       <p className="nav-item">
         <a
-          href="#resume"
-          onClick={() => handlePageChange("Resume")}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === "Resume" ? "nav-link active" : "nav-link"}
-        >
-          Resume
-        </a>
-      </p>
-      <p className="nav-item">
-        <a
           href="#home"
           onClick={() => handlePageChange("Home")}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === "Home" ? "nav-link active" : "nav-link"}
         >
-          Resume
+          Home
         </a>
       </p>
       <p className="nav-item">
@@ -61,7 +51,7 @@ export default function Nav({ currentPage, handlePageChange }) {
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === "Shop" ? "nav-link active" : "nav-link"}
         >
-          Resume
+          Shop
         </a>
       </p>
     </div>
