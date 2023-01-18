@@ -21,6 +21,7 @@ const userSchema = new Schema({
         trim: true,
     },
     order: [Order.schema],
+    /*
     boughtGame1: {
         type: Boolean,
         required: true,
@@ -51,6 +52,7 @@ const userSchema = new Schema({
         required: true,
         trim: true,
     },
+    */
 });
 
 // set up pre-save middleware to create password
