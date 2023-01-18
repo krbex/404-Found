@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Nav({ currentPage, handlePageChange }) {
   return (
-    <div className="nav flex flex-row justify-end space-x-4">
-      <p className="nav-item">
+    <div className="">
+      <p className="">
         <a
           href="#profile"
           onClick={() => handlePageChange("Profile")}
@@ -26,7 +26,7 @@ export default function Nav({ currentPage, handlePageChange }) {
       </p>
       <p className="nav-item">
         <a
-          href="#Game"
+          href="#game"
           onClick={() => handlePageChange("Game")}
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === "Game" ? "nav-link active" : "nav-link"}
@@ -34,7 +34,7 @@ export default function Nav({ currentPage, handlePageChange }) {
           Games
         </a>
       </p>
-      {/* <p className="nav-item">
+      <p className="nav-item">
         <a
           href="#resume"
           onClick={() => handlePageChange("Resume")}
@@ -43,7 +43,27 @@ export default function Nav({ currentPage, handlePageChange }) {
         >
           Resume
         </a>
-      </p> */}
+      </p>
+      <p className="nav-item">
+        <a
+          href="#home"
+          onClick={() => handlePageChange("Home")}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === "Home" ? "nav-link active" : "nav-link"}
+        >
+          Resume
+        </a>
+      </p>
+      <p className="nav-item">
+        <a
+          href="#shop"
+          onClick={() => handlePageChange("Shop")}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === "Shop" ? "nav-link active" : "nav-link"}
+        >
+          Resume
+        </a>
+      </p>
     </div>
   );
 }

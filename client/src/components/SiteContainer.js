@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-// import Navbar from "";
+import Nav from "./Nav";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Game from "./pages/Game";
+import Shop from "./pages/Shop";
+import Profile from "./pages/Profile";
 
 export default function SiteContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
 
   const renderPage = () => {
-    if (currentPage === "Home") {
-      return <Home />;
+    if (currentPage === "Shop") {
+      return <Shop />;
     }
     if (currentPage === "Game") {
       return <Game />;
@@ -17,17 +22,14 @@ export default function SiteContainer() {
     if (currentPage === "Profile") {
       return <Profile />;
     }
-    if (currentPage === "Shop") {
-      return <Shop />;
-    }
-    return <Contact />;
+    return <Home />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 
       {renderPage()}
     </div>
