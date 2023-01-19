@@ -20,10 +20,9 @@ const Nav = () => {
       </p>
       <p className="nav-item">
         <a
-          href="#signup"
-          onClick={() => handlePageChange("Signup")}
+          href="/signup"
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === "Signup" ? "nav-link active" : "nav-link"}
+          className="nav-item"
         >
           Sign Up
         </a>
