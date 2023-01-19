@@ -13,10 +13,10 @@ import {
   Tooltip,
   StackProps,
   Divider,
-  useColorModeValue
-} from '@chakra-ui/react';
+  useColorModeValue,
+} from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub } from "react-icons/ai";
 
 // export default function Profile() {
 //   return <div> Hello World this is the Profile page </div>;
@@ -26,18 +26,18 @@ const Profile = () => {
   return (
     <Container maxW="5xl" p={{ base: 5, md: 6 }}>
       <Stack
-        w="17rem"
+        w="18rem"
         spacing={2}
         p={4}
         border="1px solid"
-        borderColor={useColorModeValue('gray.400', 'gray.600')}
+        borderColor={useColorModeValue("gray.400", "gray.600")}
         rounded="md"
         margin="0 auto"
         _hover={{
           boxShadow: useColorModeValue(
-            '0 4px 6px rgba(160, 174, 192, 0.6)',
-            '0 4px 6px rgba(9, 17, 28, 0.4)'
-          )
+            "0 4px 6px rgba(160, 174, 192, 0.6)",
+            "0 4px 6px rgba(9, 17, 28, 0.4)"
+          ),
         }}
       >
         <HStack justifyContent="space-between" alignItems="baseline">
@@ -46,7 +46,6 @@ const Profile = () => {
             aria-label="Austin, Texas"
             placement="right-end"
             size="sm"
-            
           >
             <Box pos="relative">
               <Avatar

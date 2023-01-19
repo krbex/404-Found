@@ -1,5 +1,5 @@
 import React from "react";
-import blacktail from "../../assets/blacktail.webp";
+import blacktail from "../assets/blacktail.webp";
 
 export default function Game() {
   return (
