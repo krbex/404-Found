@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Game from "./pages/Game";
 import Shop from "./pages/Shop";
 import Profile from "./pages/Profile";
+import Signup from "./pages/Signup";
 
 export default function SiteContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -21,6 +22,9 @@ export default function SiteContainer() {
     }
     if (currentPage === "Profile") {
       return <Profile />;
+    }
+    if (currentPage === "Signup") {
+      return <Signup />;
     }
     return <Home />;
   };
