@@ -1,8 +1,8 @@
 const db = require('./connection');
-const { User, Game, Merch } = require('../models');
+const { User, Game } = require('../models');
 
 db.once('open', async () => {
-  
+
   await Game.deleteMany();
 
   const games = await Game.insertMany([
@@ -23,7 +23,7 @@ db.once('open', async () => {
     {
       name: "Romancing sage 3",
       description: "Once every 300 years, the Rise of Morastrum threatens the existence of our world. All born in that year are doomed to perish before its end. However, there came a time when a sole child did survive. He was using the power of death to conquer the world.",
-      image:"romancing-sage-3.webp",
+      image: "romancing-sage-3.webp",
       price: 28.99,
       quantity: 10
     },
