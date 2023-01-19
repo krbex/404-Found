@@ -8,7 +8,7 @@ export default function Game() {
       <div>
         <div>
           <h3>Blacktail</h3>
-          <img src={blacktail} alt="Blacktail cover art"></img>
+          <img style={{ width: "1000px" }} src={blacktail} alt="Blacktail cover art"></img>
         </div>
       </div>
     </div>

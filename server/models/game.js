@@ -3,18 +3,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 let gameSchema = new Schema({
-    /* 
-    id: {
-        type: Number,
-        required: true,
-        trim: true,
-    },
-    */
     name: {
         type: String,
         required: true,
         trim: true,
-    },    
+    },
     description: {
         type: String,
         required: true,
@@ -24,17 +17,12 @@ let gameSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-    },    
+    },
     price: {
         type: Number,
         required: true,
         trim: true,
     },
-    quantity: {
-        type: Number, 
-        min: 0,
-        default: 0
-    }
 });
 
 const Game = mongoose.model('Game', gameSchema);
