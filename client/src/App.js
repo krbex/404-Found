@@ -15,6 +15,7 @@ import Game from "./pages/Game";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Shop from "./pages/Shop";
+import Signup from "./pages/Signup";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -48,6 +49,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/signup" element={<Signup />} />
             </Routes>
           </StoreProvider>
         </div>
