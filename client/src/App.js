@@ -14,7 +14,6 @@ import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
 
 const httpLink = createHttpLink({
@@ -48,7 +47,6 @@ function App() {
               <Route path="/game" element={<Game />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/shop" element={<Shop />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
           </StoreProvider>
