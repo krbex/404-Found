@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <Container maxW="5xl" p={{ base: 5, md: 6 }}>
       <Stack
-        w="17rem"
+        w="18rem"
         spacing={2}
         p={4}
         border="1px solid"
