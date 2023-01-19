@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,8 +9,12 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import { StoreProvider } from "./utils/GlobalState";
-
-import SiteContainer from "./components/SiteContainer";
+import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Game from "./pages/Game";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Shop from "./pages/Shop";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -37,7 +41,14 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <SiteContainer />
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/game" element={<Game />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/shop" element={<Shop />} />
+            </Routes>
           </StoreProvider>
         </div>
       </Router>
