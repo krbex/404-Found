@@ -49,6 +49,12 @@ const typeDefs = gql`
     description: String
     image: String
   }
+  
+  type Profile {
+    _id: ID
+    username: String
+    orders: [Order]
+  }
 
   type Query {
     games(name: String): [Game]
@@ -58,6 +64,9 @@ const typeDefs = gql`
     checkout(games: [ID!]): Checkout
 
     merch(_id: ID!): Merch
+
+    profiles: [Profile]!
+    profile(profileId: ID!): Profile
   }
 
   type Mutation {
@@ -66,7 +75,12 @@ const typeDefs = gql`
     updateUser(username: String, email: String, password: String): User
     updateGame(_id: ID!, quantity: Int!): Game
     login(email:String!, password: String!): Auth
+
+    addProfile(name: String!): Profile
+    addWish(profileId: ID!, skill: String!): Profile
+    removeProfile(profileId: ID!): Profile
+    removeWish(profileId: ID!, skill: String!): Profile
   }
 `;
-
+// add and remove wish for potential wishlist for games
 module.exports = typeDefs;
