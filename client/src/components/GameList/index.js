@@ -19,7 +19,7 @@ export default function GameList() {
         products: data.games,
       });
       data.games.forEach((game) => {
-        idbPromise("game", "put", game);
+        idbPromise("games", "put", game);
       });
     } else if (!loading) {
       idbPromise("games", "get").then((games) => {
@@ -38,7 +38,7 @@ export default function GameList() {
   return (
     <div>
       <h2>Games we 100% made ourselves</h2>
-      {state.products.length ? (
+      {state.games.length ? (
         <div>
           {showGames().map((game) => (
             <GameEntry

@@ -9,13 +9,11 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_GAMES = gql`
-  query getGames($category: ID) {
-    games(category: $category) {
-      _id
-      name
-      description
-      price
-      image
-    }
+  query games {
+    _id
+    name
+    description
+    image
+    price
   }
 `;

@@ -4,9 +4,7 @@ export function idbPromise(storeName, method, object) {
     let db, tx, store;
     request.onupgradeneeded = function (e) {
       const db = request.result;
-      db.createObjectStore("game", { keyPath: "_id" });
-      db.createObjectStore("profile", { keyPath: "_id" });
-      db.createObjectStore("cart", { keyPath: "_id" });
+      db.createObjectStore("games", { keyPath: "_id" });
     };
 
     request.onerror = function (e) {
