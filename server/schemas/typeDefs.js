@@ -1,14 +1,12 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-
   type Game {
     _id: ID
     name: String
-    description: String    
-    image: String    
+    description: String
+    image: String
     price: Float
-    quantity: Int
   }
 
   type Order {
@@ -23,14 +21,13 @@ const typeDefs = gql`
     email: String
     orders: [Order]
 
-    # password: 
+    # password:
     # boughtGame1: Boolean
     # boughtGame2: Boolean
     # boughtGame3: Boolean
     # boughtGame4: Boolean
     # boughtGame5: Boolean
     # boughtGame6: Boolean
-  
   }
 
   type Checkout {
@@ -41,7 +38,7 @@ const typeDefs = gql`
     token: ID
     user: User
   }
-  
+
   type Merch {
     _id: ID
     name: String
@@ -58,15 +55,22 @@ const typeDefs = gql`
     checkout(games: [ID!]): Checkout
 
     merch(_id: ID!): Merch
+
+    profiles: [Profile]!
+    profile(profileId: ID!): Profile
   }
 
   type Mutation {
-    addUser (username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addOrder(games: [ID!]): Order
     updateUser(username: String, email: String, password: String): User
-    updateGame(_id: ID!, quantity: Int!): Game
-    login(email:String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+
+    addProfile(name: String!): Profile
+    addWish(profileId: ID!, skill: String!): Profile
+    removeProfile(profileId: ID!): Profile
+    removeWish(profileId: ID!, skill: String!): Profile
   }
 `;
-
+// add and remove wish for potential wishlist for games
 module.exports = typeDefs;
