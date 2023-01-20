@@ -59,7 +59,9 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addOrder(games: [ID!]): Order
     updateUser(username: String, email: String, password: String): User
-    login(email: String!, password: String!): Auth
+    updateGame(_id: ID!, quantity: Int!): Game
+    login(email:String!, password: String!): Auth
+
   }
 `;
 // add and remove wish for potential wishlist for games
