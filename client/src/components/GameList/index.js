@@ -13,12 +13,13 @@ export default function GameList() {
 
   useEffect(() => {
     if (data) {
+      console.log(data);
       dispatch({
         type: UPDATE_GAMES,
         products: data.games,
       });
       data.games.forEach((game) => {
-        idbPromise("products", "put", game);
+        idbPromise("game", "put", game);
       });
     } else if (!loading) {
       idbPromise("games", "get").then((games) => {
