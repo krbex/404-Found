@@ -40,3 +40,4 @@ export default function GameEntry(game) {
 }
 
 console.log("hello world");
+<rb></rb>;
