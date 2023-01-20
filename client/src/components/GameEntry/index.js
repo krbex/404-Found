@@ -18,7 +18,7 @@ export default function GameEntry(game) {
         type: ADD_TO_CART,
         game: { ...game },
       });
-      idbPromise("cart", "put", { ...game });
+      idbPromise("games", "put", { ...game });
     }
   };
 
