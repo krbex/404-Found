@@ -38,3 +38,5 @@ export default function GameEntry(game) {
     </div>
   );
 }
+
+console.log("hello world");
