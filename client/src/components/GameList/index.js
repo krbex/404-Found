@@ -61,4 +61,3 @@ export default function GameList() {
     </div>
   );
 }
-<br></br>;
