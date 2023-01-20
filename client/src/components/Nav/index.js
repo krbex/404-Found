@@ -4,6 +4,8 @@ import Auth from "../../utils/auth";
 //  using to link to login and log out function with autherization
 import { Link } from "react-router-dom";
 
+import "./Nav.css";
+
 const Nav = () => {
   return (
     <div className="">
