@@ -50,11 +50,6 @@ const typeDefs = gql`
     image: String
   }
   
-  type Profile {
-    _id: ID
-    username: String
-    orders: [Order]
-  }
 
   type Query {
     games(name: String): [Game]
