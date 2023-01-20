@@ -66,5 +66,3 @@ const typeDefs = gql`
 `;
 // add and remove wish for potential wishlist for games
 module.exports = typeDefs;
-
-<br></br>;

@@ -31,4 +31,3 @@ export const QUERY_GAMES = gql`
     price
   }
 `;
-<br></br>;
