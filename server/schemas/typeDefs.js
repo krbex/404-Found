@@ -17,6 +17,13 @@ const typeDefs = gql`
     games: [Game]
   }
 
+  type Profile {
+    _id: ID
+    name: String
+    email: String
+
+  }
+
   type User {
     _id: ID
     username: String

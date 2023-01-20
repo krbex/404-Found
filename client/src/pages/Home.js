@@ -1,5 +1,16 @@
-import React from "react";
+import React from 'react';
+// import Navbar
+// import Footer
+// carousel of Games to display
+// 
 
 export default function Home() {
-  return <div> Hello World this is the home page </div>;
+  return (
+    <div>
+      Hi im the Home page
+      {/* <Navbar />
+      <GameCat
+      <Footer /> */}
+    </div>
+  );
 }
