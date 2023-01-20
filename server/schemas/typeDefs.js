@@ -8,7 +8,6 @@ const typeDefs = gql`
     description: String    
     image: String    
     price: Float
-    quantity: Int
   }
 
   type Order {
@@ -58,10 +57,7 @@ const typeDefs = gql`
     order(_id: ID!): Order
     checkout(games: [ID!]): Checkout
 
-    merch(_id: ID!): Merch
-
-    profiles: [Profile]!
-    profile(profileId: ID!): Profile
+   
   }
 
   type Mutation {
@@ -71,10 +67,8 @@ const typeDefs = gql`
     updateGame(_id: ID!, quantity: Int!): Game
     login(email:String!, password: String!): Auth
 
-    addProfile(name: String!): Profile
-    addWish(profileId: ID!, skill: String!): Profile
-    removeProfile(profileId: ID!): Profile
-    removeWish(profileId: ID!, skill: String!): Profile
+    
+    
   }
 `;
 // add and remove wish for potential wishlist for games
