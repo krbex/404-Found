@@ -1,4 +1,8 @@
 import React from "react";
+// autherization link to connect to log in and log out feature
+import Auth from "../../utils/auth";
+//  using to link to login and log out function with autherization
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
