@@ -46,3 +46,5 @@ export function idbPromise(storeName, method, object) {
     };
   });
 }
+
+console.log("hello world");
