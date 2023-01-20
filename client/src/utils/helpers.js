@@ -1,6 +1,6 @@
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
-    const request = window.indexedDB.open("shop-shop", 1);
+    const request = window.indexedDB.open("Game Gods", 1);
     let db, tx, store;
     request.onupgradeneeded = function (e) {
       const db = request.result;
@@ -15,6 +15,7 @@ export function idbPromise(storeName, method, object) {
 
     request.onsuccess = function (e) {
       db = request.result;
+      console.log(db);
       tx = db.transaction(storeName, "readwrite");
       store = tx.objectStore(storeName);
 

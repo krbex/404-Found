@@ -1,12 +1,11 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-
   type Game {
     _id: ID
     name: String
-    description: String    
-    image: String    
+    description: String
+    image: String
     price: Float
   }
 
@@ -22,14 +21,13 @@ const typeDefs = gql`
     email: String
     orders: [Order]
 
-    # password: 
+    # password:
     # boughtGame1: Boolean
     # boughtGame2: Boolean
     # boughtGame3: Boolean
     # boughtGame4: Boolean
     # boughtGame5: Boolean
     # boughtGame6: Boolean
-  
   }
 
   type Checkout {
@@ -40,7 +38,7 @@ const typeDefs = gql`
     token: ID
     user: User
   }
-  
+
   type Merch {
     _id: ID
     name: String
@@ -48,7 +46,6 @@ const typeDefs = gql`
     description: String
     image: String
   }
-  
 
   type Query {
     games(name: String): [Game]
@@ -56,19 +53,26 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
     checkout(games: [ID!]): Checkout
+<<<<<<< HEAD
 
    
+=======
+>>>>>>> cff0e2cb0ac5ec69bba2aa08bb069f4fe75cccd4
   }
 
   type Mutation {
-    addUser (username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addOrder(games: [ID!]): Order
     updateUser(username: String, email: String, password: String): User
+<<<<<<< HEAD
     updateGame(_id: ID!, quantity: Int!): Game
     login(email:String!, password: String!): Auth
 
     
     
+=======
+    login(email: String!, password: String!): Auth
+>>>>>>> cff0e2cb0ac5ec69bba2aa08bb069f4fe75cccd4
   }
 `;
 // add and remove wish for potential wishlist for games
