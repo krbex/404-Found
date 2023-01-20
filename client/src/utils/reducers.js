@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import {
-  UPDATE_PRODUCTS,
+  UPDATE_GAMES,
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CLEAR_CART,
@@ -9,22 +9,22 @@ import {
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case UPDATE_PRODUCTS:
+    case UPDATE_GAMES:
       return {
         ...state,
-        products: [...action.products],
+        games: [...action.games],
       };
 
     case ADD_TO_CART:
       return {
         ...state,
         cartOpen: true,
-        cart: [...state.cart, action.product],
+        cart: [...state.cart, action.game],
       };
 
     case REMOVE_FROM_CART:
-      let newState = state.cart.filter((product) => {
-        return product._id !== action._id;
+      let newState = state.cart.filter((game) => {
+        return game._id !== action._id;
       });
 
       return {
