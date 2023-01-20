@@ -134,4 +134,3 @@ const resolvers = {
 };
 
 module.exports = resolvers;
-<br></br>;

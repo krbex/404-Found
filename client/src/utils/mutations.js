@@ -13,7 +13,7 @@ export const ADD_USER = gql`
     }
   }
 `;
-<br></br>;
+
 export const ADD_ORDER = gql`
   mutation AddOrder($games: [ID!]) {
     addOrder(games: $games) {
