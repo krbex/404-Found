@@ -53,26 +53,16 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
     checkout(games: [ID!]): Checkout
-<<<<<<< HEAD
-
-   
-=======
->>>>>>> cff0e2cb0ac5ec69bba2aa08bb069f4fe75cccd4
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     addOrder(games: [ID!]): Order
     updateUser(username: String, email: String, password: String): User
-<<<<<<< HEAD
+    
     updateGame(_id: ID!, quantity: Int!): Game
     login(email:String!, password: String!): Auth
 
-    
-    
-=======
-    login(email: String!, password: String!): Auth
->>>>>>> cff0e2cb0ac5ec69bba2aa08bb069f4fe75cccd4
   }
 `;
 // add and remove wish for potential wishlist for games
