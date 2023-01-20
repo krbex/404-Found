@@ -7,24 +7,24 @@ export const ADD_USER = gql`
     $email: String!
     $password: String!
   ) {
-      token
-      user {
-        _id
-      }
-    }
-`;
-
-export const ADD_ORDER = gql`
-mutation AddOrder($games: [ID!]) {
-  addOrder(games: $games) {
-    games {
-      name
-      price
-      image
-      quantity
+    token
+    user {
+      _id
     }
   }
-}
+`;
+<br></br>;
+export const ADD_ORDER = gql`
+  mutation AddOrder($games: [ID!]) {
+    addOrder(games: $games) {
+      games {
+        name
+        price
+        image
+        quantity
+      }
+    }
+  }
 `;
 
 export const UPDATE_USER = gql`
