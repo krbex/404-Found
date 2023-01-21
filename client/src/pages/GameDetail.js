@@ -18,10 +18,11 @@ export default function GameDetail() {
   const { loading, data } = useQuery(QUERY_GAMES);
 
   const { games, cart } = state;
+  console.log(state);
 
   useEffect(() => {
     // already in global store
-    if (data.games.length) {
+    if (games.length) {
       setCurrentGame(data.games.find((game) => game._id === id));
     }
     // retrieved from server
