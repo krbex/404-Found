@@ -48,7 +48,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    games(name: String): [Game]
+    games: [Game]
     game(_id: ID!): Game
     user: User
     order(_id: ID!): Order
