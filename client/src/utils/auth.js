@@ -1,7 +1,16 @@
 import decode from "jwt-decode";
 
 class AuthService {
+<<<<<<< HEAD
   getProfile() {
+=======
+    getToken() {
+        // Retrieves the user token from localStorage
+        return localStorage.getItem("id_token");
+      }
+      
+  getUser() {
+>>>>>>> 0609fa76c79c7fa6c7d6dce70cbc21250a4219b0
     return decode(this.getToken());
   }
 
@@ -22,6 +31,7 @@ class AuthService {
     }
   }
 
+<<<<<<< HEAD
   getToken() {
     // Retrieves the user token from localStorage
     return localStorage.getItem('id_token');
@@ -32,13 +42,28 @@ class AuthService {
     localStorage.setItem('id_token', idToken);
 
     window.location.assign('/');
+=======
+
+
+  login(idToken) {
+    // Saves user token to localStorage
+    localStorage.setItem("id_token", idToken);
+
+    window.location.assign("/");
+>>>>>>> 0609fa76c79c7fa6c7d6dce70cbc21250a4219b0
   }
 
   logout() {
     // Clear user token and profile data from localStorage
+<<<<<<< HEAD
     localStorage.removeItem('id_token');
     // this will reload the page and reset the state of the application
     window.location.assign('/');
+=======
+    localStorage.removeItem("id_token");
+    // this will reload the page and reset the state of the application
+    window.location.assign("/");
+>>>>>>> 0609fa76c79c7fa6c7d6dce70cbc21250a4219b0
   }
 }
 
