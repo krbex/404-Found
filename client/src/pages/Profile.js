@@ -21,7 +21,7 @@ import { AiFillGithub } from "react-icons/ai";
 // export default function Profile() {
 //   return <div> Hello World this is the Profile page </div>;
 // }
-<br></br>;
+
 const Profile = () => {
   return (
     <Container maxW="5xl" p={{ base: 5, md: 6 }}>
