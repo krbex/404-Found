@@ -1,6 +1,7 @@
 import React from 'react';
 // import Navbar
 import Nav from '../components/Nav';
+import GameList from '../components/GameList';
 // import Footer
 
 
@@ -10,7 +11,8 @@ import Nav from '../components/Nav';
 export default function Home() {
   return (
     <div className='container'>
-      <Nav />
+      < Nav />
+      <GameList />
       
       
     </div>
