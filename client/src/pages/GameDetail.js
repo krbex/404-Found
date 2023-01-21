@@ -69,7 +69,7 @@ function Detail() {
   return (
     <>
       {currentGame && cart ? (
-        <div className="">
+        <div className="currentGameBlock">
           <Link to="/game">← Back to games</Link>
 
           <h2>{currentGame.name}</h2>
