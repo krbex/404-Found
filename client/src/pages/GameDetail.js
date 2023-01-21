@@ -9,7 +9,7 @@ import { QUERY_GAMES } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 
-function Detail() {
+export default function GameDetail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
@@ -95,5 +95,3 @@ function Detail() {
     </>
   );
 }
-
-export default Detail;
