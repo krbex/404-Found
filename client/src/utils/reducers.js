@@ -12,7 +12,7 @@ export const reducer = (state, action) => {
     case UPDATE_GAMES:
       return {
         ...state,
-        games: [...action.games],
+        games: [action.games],
       };
 
     case ADD_TO_CART:

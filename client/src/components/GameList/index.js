@@ -31,16 +31,12 @@ export default function GameList() {
     }
   }, [data, loading, dispatch]);
 
-  function showGames() {
-    return state.games;
-  }
-
   return (
     <div>
       <h2>Games we 100% made ourselves</h2>
       {state.games.length ? (
         <div>
-          {showGames().map((game) => (
+          {data.games.map((game) => (
             <GameEntry
               key={game._id}
               _id={game._id}
