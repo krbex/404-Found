@@ -233,7 +233,7 @@ body .signature:hover {
   color: white;
 }
 
-/* make the navbar align to the top of the page */
+
 body .navigationWrapper {
   position: fixed;
   top: 0;
@@ -320,8 +320,6 @@ body .navigationWrapper {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 .active.parent {
   transform: translate(-40px, -25px);
 }
@@ -343,4 +341,38 @@ body .navigationWrapper {
 .invisible {
   opacity: 0 !important;
   transform: translate(50px, 0);
+}
+
+.gameBlock {
+  height: 1000px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.gameBlock p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.gameBlock button {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.gameBlock button:hover {
+  background-color: #ea4f4c;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.currentGameBlock img {
+  height: 600px;
 }
