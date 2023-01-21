@@ -23,13 +23,13 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_GAMES = gql`
-  query games {
-    game {
+  query Query {
+    games {
       _id
       name
-      description
-      image
       price
+      image
+      description
     }
   }
 `;
