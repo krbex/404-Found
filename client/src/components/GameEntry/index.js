@@ -26,8 +26,8 @@ export default function GameEntry(game) {
     <div>
       <Link to={`/game/${_id}`}>
         <img alt={name} src={`/images/${image}`} />
-        <p>{name}</p>
       </Link>
+      <p>{name}</p>
       <div>
         <span>About this title:</span>
         <div>{description}</div>

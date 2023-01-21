@@ -35,7 +35,7 @@ export default function GameList() {
     <div>
       <h2>Games we 100% made ourselves</h2>
       {state.games.length ? (
-        <div>
+        <div className="gameBlock">
           {data.games.map((game) => (
             <GameEntry
               key={game._id}
