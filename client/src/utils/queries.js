@@ -24,10 +24,12 @@ export const QUERY_CHECKOUT = gql`
 
 export const QUERY_GAMES = gql`
   query games {
-    _id
-    name
-    description
-    image
-    price
+    game {
+      _id
+      name
+      description
+      image
+      price
+    }
   }
 `;
