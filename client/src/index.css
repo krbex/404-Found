@@ -233,7 +233,7 @@ body .signature:hover {
   color: white;
 }
 
-/* make the navbar align to the top of the page */
+
 body .navigationWrapper {
   position: fixed;
   top: 0;
@@ -319,8 +319,6 @@ body .navigationWrapper {
   font-size: 10px;
   transition: all 0.3s ease-in-out;
 }
-
-
 
 .active.parent {
   transform: translate(-40px, -25px);
