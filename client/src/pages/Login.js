@@ -14,7 +14,7 @@ const Login = () => {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.Login(token);
+      Auth.login(token);
     } catch (e) {
       console.log(e);
     }
