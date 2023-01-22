@@ -89,9 +89,12 @@ export default function GameDetail() {
           </p>
 
           <img src={`/images/${currentGame.image}`} alt={currentGame.name} />
+          <p>Trailer:</p>
+          <img src={`/images/${currentGame.youtube}`} alt={currentGame.name} />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
+
       <Cart />
     </>
   );
