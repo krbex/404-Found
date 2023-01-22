@@ -27,64 +27,18 @@ import {
 
 const Profile = () => {
   return (
-    <UserCard rowSpan={2} colSpan={1} bg='tomato' />
-    // <Container maxW="5xl" p={{ base: 5, md: 6 }}>
-    //   <Stack
-    //     w="18rem"
-    //     spacing={2}
-    //     p={4}
-    //     border="1px solid"
-    //     borderColor={useColorModeValue("gray.400", "gray.600")}
-    //     rounded="md"
-    //     margin="0 auto"
-    //     _hover={{
-    //       boxShadow: useColorModeValue(
-    //         "0 4px 6px rgba(160, 174, 192, 0.6)",
-    //         "0 4px 6px rgba(9, 17, 28, 0.4)"
-    //       ),
-    //     }}
-    //   >
-    //     <HStack justifyContent="space-between" alignItems="baseline">
-    //       <Tooltip
-    //         label="Austin, Texas"
-    //         aria-label="Austin, Texas"
-    //         placement="right-end"
-    //         size="sm"
-    //       >
-    //         <Box pos="relative">
-    //           <Avatar
-    //             src=""
-    //             name="Michael Harrison"
-    //             size="xl"
-    //             borderRadius="md"
-    //           />
-    //           <Avatar
-    //             src=""
-    //             name=""
-    //             size="xs"
-    //             borderRadius="full"
-    //             pos="absolute"
-    //             bottom={0}
-    //             right="-12px"
-    //           />
-    //         </Box>
-    //       </Tooltip>
-    //       <Link isExternal href="">
-    //         <Icon as={AiFillGithub} w={6} h={6} />
-    //       </Link>
-    //     </HStack>
-    //     <chakra.h1 fontSize="xl" fontWeight="bold">
-    //       Michael Harrison
-    //     </chakra.h1>
-    //     <Text fontSize="md" color="gray.500">
-    //       Love to play and wreck kids in games.
-    //     </Text>
-    //     <Divider />
-    //     <Text fontSize="md" color="gray.500">
-    //       Games Owned
-    //     </Text>
-    //   </Stack>
-    // </Container>
+    // <UserCard rowSpan={2} colSpan={1} bg='tomato' />
+    <Grid
+      h="200px"
+      templateRows="repeat(5, 1fr)"
+      templateColumns="repeat(5, 1fr)"
+      gap={4}
+    >
+      <UserCard rowSpan={2} colSpan={1} bg="tomato" />
+      <GridItem colSpan={2} bg="papayawhip" />
+      <GridItem colSpan={2} bg="papayawhip" />
+      <GridItem colSpan={4} bg="tomato" />
+    </Grid>
   );
 };
 
