@@ -3,15 +3,15 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ game }) => {
   const [, dispatch] = useStoreContext();
 
-  const removeFromCart = (item) => {
+  const removeFromCart = (game) => {
     dispatch({
       type: REMOVE_FROM_CART,
-      _id: item._id,
+      _id: game._id,
     });
-    idbPromise("cart", "delete", { ...item });
+    idbPromise("cart", "delete", { ...game });
   };
 
   const onChange = (e) => {
@@ -19,34 +19,34 @@ const CartItem = ({ item }) => {
     if (value === "0") {
       dispatch({
         type: REMOVE_FROM_CART,
-        _id: item._id,
+        _id: game._id,
       });
-      idbPromise("cart", "delete", { ...item });
-      idbPromise("cart", "put", { ...item, purchaseQuantity: parseInt(value) });
+      idbPromise("cart", "delete", { ...game });
+      idbPromise("cart", "put", { ...game, purchaseQuantity: parseInt(value) });
     }
   };
 
   return (
     <div className="flex-row">
       <div>
-        <img src={`/images/${item.image}`} alt="" />
+        <img src={`/images/${game.image}`} alt="" />
       </div>
       <div>
         <div>
-          {item.name}, ${item.price}
+          {game.name}, ${game.price}
         </div>
         <div>
           <span>Qty:</span>
           <input
             type="number"
             placeholder="1"
-            value={item.purchaseQuantity}
+            value={game.purchaseQuantity}
             onChange={onChange}
           />
           <span
             role="img"
             aria-label="trash"
-            onClick={() => removeFromCart(item)}
+            onClick={() => removeFromCart(game)}
           >
             🗑️
           </span>
