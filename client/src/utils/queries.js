@@ -30,6 +30,8 @@ export const QUERY_GAMES = gql`
       price
       image
       description
+      youtube
+      ytUrl
     }
   }
 `;
