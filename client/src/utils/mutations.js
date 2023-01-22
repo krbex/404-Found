@@ -52,7 +52,6 @@ export const UPDATE_GAME = gql`
       description
       image
       price
-      quantity
     }
   }
 `;
