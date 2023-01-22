@@ -7,6 +7,8 @@ const typeDefs = gql`
     description: String
     image: String
     price: Float
+    youtube: String
+    ytUrl: String
   }
 
   type Order {
