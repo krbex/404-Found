@@ -9,7 +9,7 @@ import { QUERY_GAMES } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 
-function Detail() {
+export default function GameDetail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
@@ -18,10 +18,11 @@ function Detail() {
   const { loading, data } = useQuery(QUERY_GAMES);
 
   const { games, cart } = state;
+  console.log(state);
 
   useEffect(() => {
     // already in global store
-    if (data.games.length) {
+    if (games.length) {
       setCurrentGame(data.games.find((game) => game._id === id));
     }
     // retrieved from server
@@ -95,5 +96,3 @@ function Detail() {
     </>
   );
 }
-
-export default Detail;
