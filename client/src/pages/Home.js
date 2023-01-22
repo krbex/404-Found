@@ -4,6 +4,9 @@ import Nav from '../components/Nav';
 import GameList from '../components/GameList';
 // import Footer
 
+// import landing
+import Landing from '../components/Landing';
+
 
 // carousel of Games to display
 // 
@@ -11,8 +14,9 @@ import GameList from '../components/GameList';
 export default function Home() {
   return (
     <div className='container'>
-      < Nav />
-      <GameList />
+    <Landing />
+      
+      
       
       
     </div>
