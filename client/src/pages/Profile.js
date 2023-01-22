@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { AiFillGithub } from "react-icons/ai";
-import UserCard from "../components/UserCard";
 
 // export default function Profile() {
 //   return <div> Hello World this is the Profile page </div>;
@@ -25,11 +24,11 @@ import UserCard from "../components/UserCard";
 
 const Profile = () => {
   return (
-    <Container maxW="12xl" p={{ base: 12, md: 8, sm: 6 }}>
+    <Container maxW="5xl" p={{ base: 5, md: 6 }}>
       <Stack
         w="18rem"
-        spacing={3.5}
-        p={8}
+        spacing={2}
+        p={4}
         border="1px solid"
         borderColor={useColorModeValue("gray.400", "gray.600")}
         rounded="md"
@@ -69,7 +68,6 @@ const Profile = () => {
           <Link isExternal href="">
             <Icon as={AiFillGithub} w={6} h={6} />
           </Link>
-          <UserCard/>
         </HStack>
         <chakra.h1 fontSize="xl" fontWeight="bold">
           Michael Harrison
