@@ -40,7 +40,7 @@ db.once("open", async () => {
       description:
         "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
       image: "the-witcher-3.jpeg",
-      youtube: "youtube-the-witcher-3.jpeg",
+      youtube: "youtube-the-witcher-3.webp",
       ytUrl: "https://www.youtube.com/watch?v=XHrskkHf958",
       price: 24.99,
       quantity: 10,
@@ -132,7 +132,8 @@ db.once("open", async () => {
   await User.deleteMany();
 
   await User.create({
-    username: "HelloWorld",
+    firstName: "Please",
+    lastName: "Work",
     email: "HelloWorld@email.com",
     password: "password12345",
     orders: [
@@ -143,7 +144,8 @@ db.once("open", async () => {
   });
 
   await User.create({
-    username: "test1111",
+    firstName: "David",
+    lastName: "Test",
     email: "test1111@email.com",
     password: "password12345",
   });

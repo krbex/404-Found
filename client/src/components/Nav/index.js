@@ -1,6 +1,34 @@
 import React from "react";
+import Auth from "../../utils/auth";
 
 const Nav = () => {
+  function showCurrent() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul>
+          <a class="link" href="/" onClick={() => Auth.logout()}>
+            Logout
+          </a>
+        </ul>
+      );
+    } else {
+      return (
+        <ul class="navigation">
+          <li class="parent">
+            <a class="link" href="/login">
+              Login
+            </a>
+          </li>
+          <li class="parent">
+            <a class="link" href="/signup">
+              Sign Up
+            </a>
+          </li>
+        </ul>
+      );
+    }
+  }
+
   return (
     <div>
       <nav class="navigationWrapper">
@@ -25,16 +53,7 @@ const Nav = () => {
               Profile
             </a>
           </li>
-          <li class="parent">
-            <a class="link" href="/login">
-              Login
-            </a>
-          </li>
-          <li class="parent">
-            <a class="link" href="/signup">
-              Sign Up
-            </a>
-          </li>
+          {showCurrent()}
         </ul>
       </nav>
     </div>
