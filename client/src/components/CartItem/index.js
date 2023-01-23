@@ -22,7 +22,7 @@ const CartItem = ({ game }) => {
         _id: game._id,
       });
       idbPromise("cart", "delete", { ...game });
-      idbPromise("cart", "put", { ...game, purchaseQuantity: parseInt(value) });
+      //idbPromise("cart", "put", { ...game, purchaseQuantity: parseInt(value) });
     }
   };
 
