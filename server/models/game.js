@@ -28,6 +28,7 @@ let gameSchema = new Schema({
     required: true,
     trim: true,
   },
+
   ytUrl: {
     type: String,
     required: true,
