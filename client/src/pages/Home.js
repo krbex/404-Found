@@ -1,24 +1,19 @@
 import React from 'react';
 // import Navbar
 import Nav from '../components/Nav';
-import GameList from '../components/GameList';
-// import Footer
-
-// import landing
-import Landing from '../components/Landing';
-
-
-// carousel of Games to display
-// 
-
+// import GameList from '../components/GameList';
+import AboutUs from '../components/AboutUs';
+import Footer from '../components/Footer';
+import { IntroTitle } from '../components/Intro/IntroTitle';
 export default function Home() {
   return (
     <div className='container'>
-    <Landing />
-      
-      
-      
-      
+    <Nav />
+    <IntroTitle />
+    
+    
+
+   
     </div>
   );
 }

@@ -1,0 +1,19 @@
+import React from 'react';
+import { Box, Heading, Flex, AspectRatio } from "@chakra-ui/react";
+import Landing from '../Landing';
+
+export const IntroTitle = () => {
+  return (
+    <Box w="1200px" bg="blackAlpha.800" px="200px" py="60px" mb="120px">
+      <Flex   pb="px">
+        <Heading as= 'I' fontSize={54} textAlign="center" letterSpacing="3px" color="whiteAlpha.900">
+          Welcome Gamers...
+        </Heading>
+      </Flex>
+      
+      <AspectRatio w="full" ratio={16 / 9} mb="-200px">
+        <Landing />
+      </AspectRatio>
+    </Box>
+  );
+};

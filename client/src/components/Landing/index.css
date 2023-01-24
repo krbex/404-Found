@@ -54,3 +54,10 @@
     transition: 500ms;
     opacity: 0.3;
   }
+  
+
+  @media screen and (max-width: 600px) {
+    .App {
+      width:90%;
+    }
+  }

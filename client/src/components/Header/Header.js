@@ -5,7 +5,6 @@ export const Header = () => {
   return (
     <div id='main'>
         <Nav />
-
     </div>
   )
 }
