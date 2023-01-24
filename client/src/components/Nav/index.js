@@ -34,7 +34,7 @@ const Nav = () => {
     <div>
       <nav class="navigationWrapper">
         <div class="logoWrapper">
-          <span class="stylish">Gaming</span>
+          <span class="stylish SlidingText">Gaming</span>
           <span class="logo">Gods</span>
         </div>
         <ul class="navigation">

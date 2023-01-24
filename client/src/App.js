@@ -16,6 +16,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import GameDetail from "./pages/GameDetail";
+import Footer from "./components/Footer";
+
 
 
 const httpLink = createHttpLink({
@@ -41,7 +43,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        {/* <div> */}
           <StoreProvider>
             <Nav />
             <Routes>
@@ -52,9 +54,9 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
-            
+            <Footer />
           </StoreProvider>
-        </div>
+        {/* </div> */}
       </Router>
     </ApolloProvider>
   );

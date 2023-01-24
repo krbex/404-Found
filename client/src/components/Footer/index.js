@@ -46,9 +46,9 @@ const Footer = () => {
                 size={30}
                 style={{ color: "#fff", marginRight: "1rem" }}
               />
-              </div>
+            </div>
           </div>
-          </div>
+        </div>
       </div>
     );
   };
