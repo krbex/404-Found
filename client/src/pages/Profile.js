@@ -1,5 +1,5 @@
 import React from "react";
-
+import UserAvatar from "../components/Avatar";
 import {
   ChakraProvider,
   Center,
@@ -36,8 +36,9 @@ const Profile = () => {
   console.log(userData);
 
   return (
+    
     <ChakraProvider resetCSS>
-    <Container opacity={1}>
+    <Container opacity={1} display="flex">
       <Center
         mt={10}
         display="flex"
@@ -46,14 +47,14 @@ const Profile = () => {
         color="blackAlpha.500"
       >
         <Box
-          backgroundColor="whiteAlpha.400"
+          backgroundColor="blackAlpha.600"
           borderRadius="md"
           pl={3}
           pr={3}
           pt={5}
           pb={5}
           textAlign="left"
-          border="sm"
+          border="md"
         >
           <Flex
             display="flex"
@@ -61,7 +62,7 @@ const Profile = () => {
             alignItems="center"
             justifyContent="center"
             pb={2}
-            backgroundColor="whiteAlpha.500"
+            backgroundColor="whiteAlpha.600"
             border="sm"
             textAlign="center"
             opacity={0.98}
@@ -84,10 +85,12 @@ const Profile = () => {
             spacing={2}
             mt={4}
             mr={4}
-            backgroundColor="whiteAlpha.400"
+            backgroundColor="whiteAlpha.600"
             border="sm"
+            borderRadius="md"
             alignItems="center"
             justifyContent="center"
+            display="grid"
           >
             <Stack
               justifyContent="center"
@@ -96,7 +99,9 @@ const Profile = () => {
               backgroundColor="whiteAlpha.400"
               color="whiteAlpha.500"
             >
-              <Avatar size="md" />
+              <br></br>
+              <UserAvatar/>
+              <br></br>
             </Stack>
             <Stack spacing={2} border="sm" backgroundColor="whiteAlpha.300">
               <Tag
@@ -107,13 +112,24 @@ const Profile = () => {
               >
                 Gamer Online
               </Tag>
-              <Textarea border="sm" borderRadius="sm" opacity={1} />
+              <Textarea
+                border="md"
+                borderRadius="sm"
+                opacity={1}
+                textAlign="left"
+                color="whiteAlpha.500"
+                backgroundColor="whiteAlpha.600"
+                minWidth={100}
+                minHeight={100}
+              />
             </Stack>
           </Stack>
         </Box>
       </Center>
     </Container>
   </ChakraProvider>
+    
+  
 
     // <Container maxW="5xl" p={{ base: 5, md: 6 }}>
     //   <Stack

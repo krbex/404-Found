@@ -14,7 +14,7 @@ const stripePromise = loadStripe(
 	'pk_test_51MTHHZH7A1ByAq6eouN4l6VYB9aCVQFqc2jJkppIYAn09SDn9JFl2v2Fq5kAQp7RQwH8XXezrrjUSNIfVYFhxyhW00h0hLL3kc'
 );
 
-const Cart = () => {
+function Cart() {
 	const [state, dispatch] = useStoreContext();
 	const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
@@ -30,7 +30,6 @@ const Cart = () => {
 
 	// If the cart's length or if the dispatch function is updated, check to see if the cart is empty.
 	// If so, invoke the getCart method and populate the cart with the existing from the session
-
 	useEffect(() => {
 		async function getCart() {
 			const cart = await idbPromise('cart', 'get');
@@ -46,7 +45,7 @@ const Cart = () => {
 		if (!state.cart.length) {
 			getCart();
 		}
-	}, []);
+	}, [dispatch, (state.cart.length)]); /*mh changed, was empty array before*/
 
 	function toggleCart() {
 		dispatch({ type: TOGGLE_CART });
@@ -119,6 +118,6 @@ const Cart = () => {
 			)}
 		</div>
 	);
-};
+}
 
 export default Cart;
