@@ -18,7 +18,7 @@ export default function GameEntry(game) {
         type: ADD_TO_CART,
         game: { ...game },
       });
-      idbPromise("games", "put", { ...game });
+      idbPromise("cart", "put", { ...game });
     }
   };
 
@@ -34,7 +34,7 @@ export default function GameEntry(game) {
         <div>{name} is in stock</div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <button onClick={() => addToCart()}>Add to cart</button>
     </div>
   );
 }
