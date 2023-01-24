@@ -9,7 +9,6 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.20.7",
     "@chakra-ui/react": "^2.4.8",
-    "@emotion/react": "^11.10.5",
     "@stripe/stripe-js": "^1.46.0",
     "babel-loader": "^9.1.2",
     "graphql": "^16.6.0",
@@ -40,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "webpack-cli": "^5.0.1"
   }
 }
