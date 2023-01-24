@@ -15,6 +15,7 @@ const Login = () => {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      document.location.replace('/profile');
     } catch (e) {
       console.log(e);
     }

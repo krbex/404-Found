@@ -52,6 +52,8 @@ export const UPDATE_GAME = gql`
       description
       image
       price
+      youtube
+      ytUrl
     }
   }
 `;
