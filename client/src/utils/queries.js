@@ -11,13 +11,13 @@ export const QUERY_USERS = gql`
         games {
           _id
           name
-          purchaseDate
         }
       }
     }
   }
 `;
 
+// purchaseDate in user games
 export const QUERY_CHECKOUT = gql`
   query getCheckout($games: [ID]!) {
     checkout(games: $games) {
