@@ -15,8 +15,11 @@ export function idbPromise(storeName, method, object) {
     request.onsuccess = function (e) {
       db = request.result;
       console.log(db);
+      console.log(db);
       tx = db.transaction(storeName, "readwrite");
+      console.log(tx);
       store = tx.objectStore(storeName);
+      console.log(store);
 
       db.onerror = function (e) {
         console.log("error", e);

@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         cartOpen: true,
-        cart: [...state.cart, action.game],
+        cart: [...state.cart, action.games],
       };
 
     case REMOVE_FROM_CART:

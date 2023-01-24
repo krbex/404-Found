@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import {
+  ChakraProvider,
+  Box,
+  Image,
+  Container,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 
 export default function GameEntry(game) {
   const [state, dispatch] = useStoreContext();
@@ -16,27 +24,54 @@ export default function GameEntry(game) {
     if (gameInCart) {
       dispatch({
         type: ADD_TO_CART,
-        game: { ...game },
+        game: { game },
       });
-      idbPromise("games", "put", { ...game });
+      idbPromise("cart", "put", { ...game });
     }
   };
 
   return (
-    <div>
-      <Link to={`/game/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
-      </Link>
-      <p>{name}</p>
-      <div>
-        <span>About this title:</span>
-        <div>{description}</div>
-        <div>{name} is in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    <ChakraProvider resetCSS>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="space-around"
+        flexDirection="row"
+        pb={5}
+        pt={5}
+      >
+        <Container
+          display="flex"
+          justifyContent="center"
+          flexDirection="column"
+          alignItems="center"
+          backgroundColor="blackAlpha.500"
+          mb={40}
+        >
+          <Link to={`/game/${_id}`}>
+            <Image
+              alt={name}
+              src={`/images/${image}`}
+              height={270}
+              width={480}
+              overflow="hidden"
+              maxWidth={500}
+              maxHeight={500}
+            />
+          </Link>
+          <Text>{description}</Text>
+          <Text>{price}</Text>
+          <Button
+            onClick={() => addToCart()}
+            variant="solid"
+            size="md"
+            colorScheme="red"
+            fontWeight="bold"
+          >
+            Add to cart
+          </Button>
+        </Container>
+      </Box>
+    </ChakraProvider>
   );
 }
-
-console.log("hello world");

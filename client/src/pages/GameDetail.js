@@ -47,25 +47,22 @@ function GameDetail() {
     }
   }, [games, data, loading, dispatch, id]);
 
-  // const addToCart = () => {
-  //   const itemInCart = cart.find((cartItem) => cartItem._id === id);
-  //   if (itemInCart) {
-  //     dispatch({
-  //       type: ADD_TO_CART,
-  //       game: { ...currentGame, purchaseQuantity: 1 },
-  //     });
-  //     idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
-  //   }
-  // };
+  const addToCart = () => {
+    dispatch({
+      type: ADD_TO_CART,
+      games: { ...currentGame, purchaseQuantity: 1 },
+    });
+    idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
+  };
 
-  // const removeFromCart = () => {
-  //   dispatch({
-  //     type: REMOVE_FROM_CART,
-  //     _id: currentGame._id,
-  //   });
+  const removeFromCart = () => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: currentGame._id,
+    });
 
-  //   idbPromise("cart", "delete", { ...currentGame });
-  // };
+    idbPromise("cart", "delete", { ...currentGame });
+  };
 
   return (
     <>
@@ -77,6 +74,9 @@ function GameDetail() {
 
           <p>{currentGame.description}</p>
 
+          <button onClick={() => addToCart()}>Add to Cart</button>
+          <button onClick={() => removeFromCart()}>Remove from Cart</button>
+
           <img src={`/images/${currentGame.image}`} alt={currentGame.name} />
           <p>Trailer:</p>
           {/* <a href={currentGame.ytUrl}>
@@ -85,11 +85,11 @@ function GameDetail() {
               alt={currentGame.name}
             />
           </a> */}
-          <iframe 
-          width="853"
-          height="480"
-          src={`https://www.youtube.com/embed/${currentGame.ytUrl}`}
-          title = "Embedded youtube"
+          <iframe
+            width="853"
+            height="480"
+            src={`https://www.youtube.com/embed/${currentGame.ytUrl}`}
+            title="Embedded youtube"
           />
         </div>
       ) : null}
