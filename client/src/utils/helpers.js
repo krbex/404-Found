@@ -17,6 +17,7 @@ export function idbPromise(storeName, method, object) {
       console.log(db);
       tx = db.transaction(storeName, "readwrite");
       store = tx.objectStore(storeName);
+      console.log(store)
 
       db.onerror = function (e) {
         console.log("error", e);
@@ -24,14 +25,17 @@ export function idbPromise(storeName, method, object) {
 
       switch (method) {
         case "put":
+          console.log(object)
           store.put(object);
           resolve(object);
           break;
         case "get":
           const all = store.getAll();
+          console.log(all)
           all.onsuccess = function () {
             resolve(all.result);
           };
+          
           break;
         case "delete":
           store.delete(object._id);
