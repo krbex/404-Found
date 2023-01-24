@@ -15,36 +15,36 @@ db.once("open", async () => {
       price: 69.99,
       quantity: 10,
     },
-    {
-      name: "Blacktail",
-      description:
-        "Become the guardian of the woods or the terror nightmares are made of in BLACKTAIL, a unique blend of intense archery combat, magic and dark storytelling set in a vibrant fairy tale world.",
-      image: "blacktail.webp",
-      youtube: "youtube-blacktail.webp",
-      ytUrl: "YS1DS1-DD6M",
-      price: 29.99,
-      quantity: 10,
-    },
-    {
-      name: "Romancing sage 3",
-      description:
-        "Once every 300 years, the Rise of Morastrum threatens the existence of our world. All born in that year are doomed to perish before its end. However, there came a time when a sole child did survive. He was using the power of death to conquer the world.",
-      image: "romancing-sage-3.webp",
-      youtube: "youtube-romancing-sage-3.webp",
-      ytUrl: "38-4NlwQVv8",
-      price: 28.99,
-      quantity: 10,
-    },
-    {
-      name: "The Witcher 3: Wild Hunt ",
-      description:
-        "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
-      image: "the-witcher-3.jpeg",
-      youtube: "youtube-the-witcher-3.webp",
-      ytUrl: "XHrskkHf958",
-      price: 24.99,
-      quantity: 10,
-    },
+    // {
+    //   name: "Blacktail",
+    //   description:
+    //     "Become the guardian of the woods or the terror nightmares are made of in BLACKTAIL, a unique blend of intense archery combat, magic and dark storytelling set in a vibrant fairy tale world.",
+    //   image: "blacktail.webp",
+    //   youtube: "youtube-blacktail.webp",
+    //   ytUrl: "YS1DS1-DD6M",
+    //   price: 29.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Romancing sage 3",
+    //   description:
+    //     "Once every 300 years, the Rise of Morastrum threatens the existence of our world. All born in that year are doomed to perish before its end. However, there came a time when a sole child did survive. He was using the power of death to conquer the world.",
+    //   image: "romancing-sage-3.webp",
+    //   youtube: "youtube-romancing-sage-3.webp",
+    //   ytUrl: "38-4NlwQVv8",
+    //   price: 28.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "The Witcher 3: Wild Hunt ",
+    //   description:
+    //     "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
+    //   image: "the-witcher-3.jpeg",
+    //   youtube: "youtube-the-witcher-3.webp",
+    //   ytUrl: "XHrskkHf958",
+    //   price: 24.99,
+    //   quantity: 10,
+    // },
     // {
     //   name: "River City Girls 2",
     //   description:
