@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-// import Cart from "../components/Cart/index";
+import Cart from "../components/Cart/index";
 import { useStoreContext } from "../utils/GlobalState";
 import { REMOVE_FROM_CART, ADD_TO_CART, UPDATE_GAMES } from "../utils/actions";
 import { QUERY_GAMES } from "../utils/queries";
@@ -95,7 +95,7 @@ function GameDetail() {
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
 
-      {/* <Cart /> */}
+      <Cart />
     </>
   );
 }

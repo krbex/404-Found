@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
       };
 
     case REMOVE_FROM_CART:
-      let newState = state.cart.filter((game) => {
+      let newState = state.games.filter((game) => {
         return game._id !== action._id;
       });
 

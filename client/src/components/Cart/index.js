@@ -45,7 +45,7 @@ const Cart = () => {
 
   function calculateTotal() {
     let sum = 0;
-    state.cart.forEach((game) => {
+    state.games.forEach((game) => {
       sum += game.price * game.purchaseQuantity;
     });
     return sum.toFixed(2);
@@ -85,7 +85,8 @@ const Cart = () => {
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
         <div>
-          {state.cart.map((game) => (
+          {state.games.map((game) => (
+            // console.log(game)
             <CartItem key={game._id} game={game} />
           ))}
 
