@@ -84,7 +84,7 @@ const Profile = () => {
               <div>
                 <h2> */}
                   {/* once in an array we can map through games with this ex. order.games.names*/}
-                  {/* {order.games} 
+                  {/* {orders.game} 
                 </h2>
               </div>
             ) */}
