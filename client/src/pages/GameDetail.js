@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import Cart from "../components/Cart/index";
+// import Cart from "../components/Cart/index";
 import { useStoreContext } from "../utils/GlobalState";
 import { REMOVE_FROM_CART, ADD_TO_CART, UPDATE_GAMES } from "../utils/actions";
 import { QUERY_GAMES } from "../utils/queries";
@@ -41,31 +41,31 @@ function GameDetail() {
       idbPromise("games", "get").then((indexedGames) => {
         dispatch({
           type: UPDATE_GAMES,
-          games: indexedGames,
+          products: indexedGames,
         });
       });
     }
   }, [games, data, loading, dispatch, id]);
 
-  const addToCart = () => {
-    const itemInCart = cart.find((cartItem) => cartItem._id === id);
-    if (itemInCart) {
-      dispatch({
-        type: ADD_TO_CART,
-        game: { ...currentGame, purchaseQuantity: 1 },
-      });
-      idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
-    }
-  };
+  // const addToCart = () => {
+  //   const itemInCart = cart.find((cartItem) => cartItem._id === id);
+  //   if (itemInCart) {
+  //     dispatch({
+  //       type: ADD_TO_CART,
+  //       game: { ...currentGame, purchaseQuantity: 1 },
+  //     });
+  //     idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
+  //   }
+  // };
 
-  const removeFromCart = () => {
-    dispatch({
-      type: REMOVE_FROM_CART,
-      _id: currentGame._id,
-    });
+  // const removeFromCart = () => {
+  //   dispatch({
+  //     type: REMOVE_FROM_CART,
+  //     _id: currentGame._id,
+  //   });
 
-    idbPromise("cart", "delete", { ...currentGame });
-  };
+  //   idbPromise("cart", "delete", { ...currentGame });
+  // };
 
   return (
     <>
@@ -79,23 +79,17 @@ function GameDetail() {
 
           <img src={`/images/${currentGame.image}`} alt={currentGame.name} />
           <p>Trailer:</p>
-          {/* <a href={currentGame.ytUrl}>
+          <a href={currentGame.ytUrl}>
             <img
               src={`/images/${currentGame.youtube}`}
               alt={currentGame.name}
             />
-          </a> */}
-          <iframe 
-          width="853"
-          height="480"
-          src={`https://www.youtube.com/embed/${currentGame.ytUrl}`}
-          title = "Embedded youtube"
-          />
+          </a>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
 
-      <Cart />
+      {/* <Cart /> */}
     </>
   );
 }
