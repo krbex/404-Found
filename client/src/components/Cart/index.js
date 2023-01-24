@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
@@ -10,7 +10,9 @@ import { TOGGLE_CART, ADD_TO_CART } from "../../utils/actions";
 import "./style.css";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-// const stripePromise = loadStripe('pk_test_51MTHHZH7A1ByAq6eouN4l6VYB9aCVQFqc2jJkppIYAn09SDn9JFl2v2Fq5kAQp7RQwH8XXezrrjUSNIfVYFhxyhW00h0hLL3kc');
+const stripePromise = loadStripe(
+  "pk_test_51MTHHZH7A1ByAq6eouN4l6VYB9aCVQFqc2jJkppIYAn09SDn9JFl2v2Fq5kAQp7RQwH8XXezrrjUSNIfVYFhxyhW00h0hLL3kc"
+);
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -18,22 +20,24 @@ const Cart = () => {
 
   // We check to see if there is a data object that exists, if so this means that a checkout session was returned from the backend
   // Then we should redirect to the checkout with a reference to our session id
-  // useEffect(() => {
-  //   if (data) {
-  //     stripePromise.then((res) => {
-  //       res.redirectToCheckout({ sessionId: data.checkout.session });
-  //     });
-  //   }
-  // }, [data]);
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   // If the cart's length or if the dispatch function is updated, check to see if the cart is empty.
   // If so, invoke the getCart method and populate the cart with the existing from the session
+
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise("cart", "get");
+      console.log("here is the cart");
+      console.log(cart);
       if (cart.length) {
-        console.log(cart);
-        dispatch({ type: ADD_TO_CART, games: cart });
+        dispatch({ type: ADD_TO_CART, games: [...cart] });
       } else {
         dispatch({ type: ADD_TO_CART, games: [] });
       }
@@ -50,7 +54,7 @@ const Cart = () => {
 
   function calculateTotal() {
     let sum = 0;
-    state.games.forEach((game) => {
+    state.cart.forEach((game) => {
       sum += game.price * game.purchaseQuantity;
     });
     return sum.toFixed(2);

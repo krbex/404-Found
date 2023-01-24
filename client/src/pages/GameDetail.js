@@ -48,11 +48,15 @@ function GameDetail() {
   }, [games, data, loading, dispatch, id]);
 
   const addToCart = () => {
+    // const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    // if (itemInCart) {
+    console.log(currentGame);
     dispatch({
       type: ADD_TO_CART,
       games: { ...currentGame, purchaseQuantity: 1 },
     });
     idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
+    // }
   };
 
   const removeFromCart = () => {
@@ -73,7 +77,6 @@ function GameDetail() {
           <h2>{currentGame.name}</h2>
 
           <p>{currentGame.description}</p>
-
           <button onClick={() => addToCart()}>Add to Cart</button>
           <button onClick={() => removeFromCart()}>Remove from Cart</button>
 
