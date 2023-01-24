@@ -17,6 +17,23 @@ export const QUERY_USERS = gql`
   }
 `;
 
+export const QUERY_USER = gql`
+  {
+    user {
+      _id
+      firstName
+      lastName
+      email
+      orders {
+        games {
+          _id
+          name
+        }
+      }
+    }
+  }
+`;
+
 // purchaseDate in user games
 export const QUERY_CHECKOUT = gql`
   query getCheckout($games: [ID]!) {
