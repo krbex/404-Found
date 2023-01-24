@@ -75,56 +75,6 @@ db.once("open", async () => {
       price: 69.99,
       quantity: 10,
     },
-    {
-      name: "One Piece: Grand Cruise",
-      description:
-        "The famed pirate, Monkey.D.Luffy, better known as Straw Hat Luffy, and his Straw Hat Crew, are sailing across the New World in search of the next island and the next adventure that awaits them.",
-      image: "one-piece-grand-cruise.webp",
-      youtube: "youtube-one-piece-grand-cruise.webp",
-      ytUrl: "https://www.youtube.com/watch?v=Yp3CEbPahnY",
-      price: 59.99,
-      quantity: 10,
-    },
-    {
-      name: "Light Tracer",
-      description:
-        "If we need to describe this game in brief sentence, this game is like an evil soul living in a cute body.",
-      image: "light-tracer.webp",
-      youtube: "youtube-light-tracer.webp",
-      ytUrl: "https://www.youtube.com/watch?v=a6Ld22IJiJE",
-      price: 14.99,
-      quantity: 10,
-    },
-    {
-      name: "Hogwarts Legacy",
-      description:
-        "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.",
-      image: "hogwarts-legacy.webp",
-      youtube: "youtube-hogwarts-legacy.webp",
-      ytUrl: "https://www.youtube.com/watch?v=NthGfn_ddRQ",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "Forspoken",
-      description:
-        "Mysteriously transported from New York City, Frey Holland finds herself trapped in the breathtaking land of Athia.",
-      image: "forspoken.webp",
-      youtube: "youtube-forspoken.webp",
-      ytUrl: "https://www.youtube.com/watch?v=0q6L_JBArCs",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "Dragon Ball Z",
-      description:
-        "Goku has died from the virus in his heart, and the world was destroyed by the androids. The surviving warriors, Trunks and Gohan, will fight to protect the planet.",
-      image: "dragon-ball-z.webp",
-      youtube: "youtube-dragon-ball-z.webp",
-      ytUrl: "https://www.youtube.com/watch?v=Bf85wwJuFBE",
-      price: 19.99,
-      quantity: 10,
-    },
   ]);
 
   console.log("games seeded");
