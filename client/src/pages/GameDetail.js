@@ -79,12 +79,18 @@ function GameDetail() {
 
           <img src={`/images/${currentGame.image}`} alt={currentGame.name} />
           <p>Trailer:</p>
-          <a href={currentGame.ytUrl}>
+          {/* <a href={currentGame.ytUrl}>
             <img
               src={`/images/${currentGame.youtube}`}
               alt={currentGame.name}
             />
-          </a>
+          </a> */}
+          <iframe 
+          width="853"
+          height="480"
+          src={`https://www.youtube.com/embed/${currentGame.ytUrl}`}
+          title = "Embedded youtube"
+          />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
