@@ -45,86 +45,86 @@ db.once("open", async () => {
       price: 24.99,
       quantity: 10,
     },
-    {
-      name: "River City Girls 2",
-      description:
-        "The River City Girls are ready for round 2! When an old foe returns for revenge, Misako, Kyoko, Kunio, and Riki - joined by newcomers Marian and Provie - hit the streets for an all-new beat-'em-up adventure packed with new abilities, enemies, allies, locations, and more! ",
-      image: "river-city-girls-2.webp",
-      youtube: "youtube-river-city-girls-2.webp",
-      ytUrl: "_CHZvH7T-QA",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "Street Fighter V",
-      description:
-        "Rule the ring with Street Fighter™ V: Champion Edition, the most robust version of the acclaimed fighting game!",
-      image: "street-fighter-v.webp",
-      youtube: "youtube-street-fighter-v.webp",
-      ytUrl: "0nFd7Iylj5A",
-      price: 29.99,
-      quantity: 10,
-    },
-    {
-      name: "Resident Evil 4",
-      description:
-        "Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the president's kidnapped daughter.He tracks her to a secluded European village, where there is something terribly wrong with the locals.",
-      image: "resident-evil-4.webp",
-      youtube: "youtube-resident-evil-4.webp",
-      ytUrl: "gTMwx9-rKe8",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "One Piece: Grand Cruise",
-      description:
-        "The famed pirate, Monkey.D.Luffy, better known as Straw Hat Luffy, and his Straw Hat Crew, are sailing across the New World in search of the next island and the next adventure that awaits them.",
-      image: "one-piece-grand-cruise.webp",
-      youtube: "youtube-one-piece-grand-cruise.webp",
-      ytUrl: "Yp3CEbPahnY",
-      price: 59.99,
-      quantity: 10,
-    },
-    {
-      name: "Light Tracer",
-      description:
-        "If we need to describe this game in brief sentence, this game is like an evil soul living in a cute body.",
-      image: "light-tracer.webp",
-      youtube: "youtube-light-tracer.webp",
-      ytUrl: "a6Ld22IJiJE",
-      price: 14.99,
-      quantity: 10,
-    },
-    {
-      name: "Hogwarts Legacy",
-      description:
-        "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.",
-      image: "hogwarts-legacy.webp",
-      youtube: "youtube-hogwarts-legacy.webp",
-      ytUrl: "NthGfn_ddRQ",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "Forspoken",
-      description:
-        "Mysteriously transported from New York City, Frey Holland finds herself trapped in the breathtaking land of Athia.",
-      image: "forspoken.webp",
-      youtube: "youtube-forspoken.webp",
-      ytUrl: "0q6L_JBArCs",
-      price: 69.99,
-      quantity: 10,
-    },
-    {
-      name: "Dragon Ball Z",
-      description:
-        "Goku has died from the virus in his heart, and the world was destroyed by the androids. The surviving warriors, Trunks and Gohan, will fight to protect the planet.",
-      image: "dragon-ball-z.webp",
-      youtube: "youtube-dragon-ball-z.webp",
-      ytUrl: "Bf85wwJuFBE",
-      price: 19.99,
-      quantity: 10,
-    },
+    // {
+    //   name: "River City Girls 2",
+    //   description:
+    //     "The River City Girls are ready for round 2! When an old foe returns for revenge, Misako, Kyoko, Kunio, and Riki - joined by newcomers Marian and Provie - hit the streets for an all-new beat-'em-up adventure packed with new abilities, enemies, allies, locations, and more! ",
+    //   image: "river-city-girls-2.webp",
+    //   youtube: "youtube-river-city-girls-2.webp",
+    //   ytUrl: "_CHZvH7T-QA",
+    //   price: 69.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Street Fighter V",
+    //   description:
+    //     "Rule the ring with Street Fighter™ V: Champion Edition, the most robust version of the acclaimed fighting game!",
+    //   image: "street-fighter-v.webp",
+    //   youtube: "youtube-street-fighter-v.webp",
+    //   ytUrl: "0nFd7Iylj5A",
+    //   price: 29.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Resident Evil 4",
+    //   description:
+    //     "Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the president's kidnapped daughter.He tracks her to a secluded European village, where there is something terribly wrong with the locals.",
+    //   image: "resident-evil-4.webp",
+    //   youtube: "youtube-resident-evil-4.webp",
+    //   ytUrl: "gTMwx9-rKe8",
+    //   price: 69.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "One Piece: Grand Cruise",
+    //   description:
+    //     "The famed pirate, Monkey.D.Luffy, better known as Straw Hat Luffy, and his Straw Hat Crew, are sailing across the New World in search of the next island and the next adventure that awaits them.",
+    //   image: "one-piece-grand-cruise.webp",
+    //   youtube: "youtube-one-piece-grand-cruise.webp",
+    //   ytUrl: "Yp3CEbPahnY",
+    //   price: 59.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Light Tracer",
+    //   description:
+    //     "If we need to describe this game in brief sentence, this game is like an evil soul living in a cute body.",
+    //   image: "light-tracer.webp",
+    //   youtube: "youtube-light-tracer.webp",
+    //   ytUrl: "a6Ld22IJiJE",
+    //   price: 14.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Hogwarts Legacy",
+    //   description:
+    //     "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.",
+    //   image: "hogwarts-legacy.webp",
+    //   youtube: "youtube-hogwarts-legacy.webp",
+    //   ytUrl: "NthGfn_ddRQ",
+    //   price: 69.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Forspoken",
+    //   description:
+    //     "Mysteriously transported from New York City, Frey Holland finds herself trapped in the breathtaking land of Athia.",
+    //   image: "forspoken.webp",
+    //   youtube: "youtube-forspoken.webp",
+    //   ytUrl: "0q6L_JBArCs",
+    //   price: 69.99,
+    //   quantity: 10,
+    // },
+    // {
+    //   name: "Dragon Ball Z",
+    //   description:
+    //     "Goku has died from the virus in his heart, and the world was destroyed by the androids. The surviving warriors, Trunks and Gohan, will fight to protect the planet.",
+    //   image: "dragon-ball-z.webp",
+    //   youtube: "youtube-dragon-ball-z.webp",
+    //   ytUrl: "Bf85wwJuFBE",
+    //   price: 19.99,
+    //   quantity: 10,
+    // },
   ]);
 
   console.log("games seeded");
