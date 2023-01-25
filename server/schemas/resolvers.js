@@ -1,7 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Game, Order } = require("../models");
 const { signToken } = require("../utils/auth");
-const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolvers = {
   Query: {
@@ -40,43 +39,6 @@ const resolvers = {
       }
 
       throw new AuthenticationError("Not logged in");
-    },
-
-    checkout: async (parent, args, context) => {
-      const url = new URL(context.headers.referer).origin;
-      const order = new Order({ games: args.games });
-      const line_items = [];
-
-      const { games } = await order.populate("games");
-
-      for (let i = 0; i < games.length; i++) {
-        const game = await stripe.games.create({
-          name: games[i].name,
-          description: games[i].description,
-          images: [`${url}/images/${games[i].image}`],
-        });
-
-        const price = await stripe.prices.create({
-          game: game.id,
-          unit_amount: games[i].price * 100,
-          currency: "usd",
-        });
-
-        line_items.push({
-          price: price.id,
-          quantity: 1,
-        });
-      }
-
-      const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
-        line_items,
-        mode: "payment",
-        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`,
-      });
-
-      return { session: session.id };
     },
   },
 
