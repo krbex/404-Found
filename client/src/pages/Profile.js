@@ -1,6 +1,6 @@
 import React from "react";
 import UserAvatar from "../components/Avatar";
-import { extendTheme } from "@chakra-ui/react"
+
 
 
 import {
@@ -29,14 +29,6 @@ import { AiFillGithub } from "react-icons/ai";
 import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
 
-const theme = extendTheme({
-  colors: {
-    backgroundColor: {
-      
-      900: "#ea4f4c",
-    },
-  },
-})
 
 const Profile = () => {
   const { loading, data } = useQuery(QUERY_USERS);
@@ -53,7 +45,7 @@ const Profile = () => {
       justifyContent="center"
       textAlign="center"
       mt={4}
-      backgroundColor="#ea4f4c"
+      backgroundColor="whiteAlpha.100"
     >
       <Flex
         display="flex"
@@ -86,7 +78,7 @@ const Profile = () => {
         pt={3}
         pb={3}
       >
-        <Avatar
+        <UserAvatar
           // size="xl"
           // src="{generateDiceBearGridy(Math.random())}"
           // width={200}

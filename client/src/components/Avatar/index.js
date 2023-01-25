@@ -5,7 +5,7 @@ import {
 
 } from "../../utils/randomAvatar";
 
-export default function Avatar() {
+export default function UserAvatar() {
   const array = [0];
 
   return (
