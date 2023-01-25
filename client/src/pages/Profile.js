@@ -38,94 +38,64 @@ const Profile = () => {
   return (
     
     <ChakraProvider resetCSS>
-    <Container opacity={1} display="flex">
-      <Center
-        mt={10}
+    <Flex
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      textAlign="center"
+      mt={4}
+      backgroundColor="whiteAlpha.50"
+    >
+      <Flex
         display="flex"
-        maxWidth={650}
-        border="md"
-        color="blackAlpha.500"
+        flexDirection="row"
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        border="sm"
+        borderRadius="lg"
+        backgroundColor="#f7f3f3"
+        p={2}
+        boxShadow="lg"
       >
-        <Box
-          backgroundColor="blackAlpha.600"
+        <Heading>Welcome Gamer!</Heading>
+      </Flex>
+    </Flex>
+    <Container
+      color="blackAlpha.800"
+      mt={10}
+      backgroundColor="#f7f3f3"
+      border="md"
+      borderRadius="md"
+      boxShadow="xl"
+      opacity={1}
+    >
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <UserAvatar/>
+        <Container />
+      </Box>
+      <Box mt={4} color="whiteAlpha.500">
+        <Heading></Heading>
+        <Heading
+          textAlign="center"
+          fontSize="2xl"
+          backgroundColor="whiteAlpha.100"
+          color="blackAlpha.900"
+          as="h2"
           borderRadius="md"
-          pl={3}
-          pr={3}
-          pt={5}
-          pb={5}
-          textAlign="left"
-          border="md"
+          border="sm"
+          boxShadow="sm"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          m={1}
         >
-          <Flex
-            display="flex"
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="center"
-            pb={2}
-            backgroundColor="whiteAlpha.600"
-            border="sm"
-            textAlign="center"
-            opacity={0.98}
-            borderRadius="sm"
-          >
-            <Heading
-              size="md"
-              as="h2"
-              lineHeight="shorter"
-              fontFamily="heading"
-              color="red.500"
-              opacity={1}
-              fontSize="2xl"
-            >
-              Welcome {userData.firstName} {userData.lastName}!
-            </Heading>
-          </Flex>
-          <Stack
-            ml={4}
-            spacing={2}
-            mt={4}
-            mr={4}
-            backgroundColor="whiteAlpha.600"
-            border="sm"
-            borderRadius="md"
-            alignItems="center"
-            justifyContent="center"
-            display="grid"
-          >
-            <Stack
-              justifyContent="center"
-              alignItems="center"
-              spacing={2}
-              backgroundColor="whiteAlpha.400"
-              color="whiteAlpha.500"
-            >
-              <br></br>
-              <UserAvatar/>
-              <br></br>
-            </Stack>
-            <Stack spacing={2} border="sm" backgroundColor="whiteAlpha.300">
-              <Tag
-                size="md"
-                variant="solid"
-                colorScheme="whatsapp"
-                backgroundColor="blackAlpha.500"
-              >
-                Gamer Online
-              </Tag>
-              <Textarea
-                border="md"
-                borderRadius="sm"
-                opacity={1}
-                textAlign="left"
-                color="whiteAlpha.500"
-                backgroundColor="whiteAlpha.600"
-                minWidth={100}
-                minHeight={100}
-              />
-            </Stack>
-          </Stack>
-        </Box>
-      </Center>
+          GG's {userData.firstName} {userData.lastName}
+        </Heading>
+      </Box>
+      <Box m={2} backgroundColor="whiteAlpha.100">
+        <Textarea pb={4} mb={2} />
+      </Box>
     </Container>
   </ChakraProvider>
     
