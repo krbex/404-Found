@@ -9,6 +9,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.20.7",
+    "@bigheads/core": "^0.3.3",
     "@chakra-ui/react": "^2.4.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
