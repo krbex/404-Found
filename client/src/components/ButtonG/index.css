@@ -1,0 +1,38 @@
+.game-button {
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+
+
+}
+
+.buttonG {
+    /* background-color: #010101;
+    color: rgb(230, 102, 102);
+    margin: 13px 0 0 15px;
+    padding-left: 12px;
+    padding-top: 9px;
+    padding-right: 12px;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 13px; */
+    align-self: center;
+    position: absolute;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+
+    
+    
+
+}
+.buttonG:hover {
+    background-color: rgb(215, 76, 76);
+    transition: 0.7s;
+}
