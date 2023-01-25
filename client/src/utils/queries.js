@@ -34,7 +34,6 @@ export const QUERY_USER = gql`
   }
 `;
 
-// purchaseDate in user games
 export const QUERY_CHECKOUT = gql`
   query getCheckout($games: [ID]!) {
     checkout(games: $games) {

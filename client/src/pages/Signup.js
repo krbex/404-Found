@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-import { ADD_USER } from '../utils/mutations'
+import { ADD_USER } from "../utils/mutations";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const mutationResponse = await addUser({
@@ -20,9 +19,8 @@ function Signup(props) {
     });
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
-    document.location.replace('/profile');
+    document.location.replace("/profile");
   };
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
@@ -30,7 +28,6 @@ function Signup(props) {
       [name]: value,
     });
   };
-
   return (
     <div className="">
       <Link to="/login">← Go to Login</Link>

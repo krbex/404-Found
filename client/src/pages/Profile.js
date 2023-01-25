@@ -11,24 +11,16 @@ import {
   Icon,
   Avatar,
   Tooltip,
-  StackProps,
   Divider,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
 import { AiFillGithub } from "react-icons/ai";
 import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
-// export default function Profile() {
-//   return <div> Hello World this is the Profile page </div>;
-// }
 
 const Profile = () => {
- const {loading, data} = useQuery(QUERY_USERS);
- const userData = data?.user || {};
- console.log(userData);
-
-
+  const { loading, data } = useQuery(QUERY_USERS);
+  const userData = data?.user || {};
   return (
     <Container maxW="5xl" p={{ base: 5, md: 6 }}>
       <Stack
@@ -76,20 +68,9 @@ const Profile = () => {
           </Link>
         </HStack>
         <chakra.h1 fontSize="xl" fontWeight="bold">
-         {userData.firstName} {userData.lastName}
+          {userData.firstName} {userData.lastName}
         </chakra.h1>
-        <Text fontSize="md" color="gray.500">
-          {/* {userData.orders.map(order => {
-            return (
-              <div>
-                <h2> */}
-                  {/* once in an array we can map through games with this ex. order.games.names*/}
-                  {/* {orders.game} 
-                </h2>
-              </div>
-            ) */}
-          {/* })} */}
-        </Text>
+        <Text fontSize="md" color="gray.500"></Text>
         <Divider />
         <Text fontSize="md" color="gray.500">
           Games Owned

@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+
 const path = require("path");
 
 module.exports = () => {
@@ -15,6 +17,12 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: "./index.js",
         title: "Gaming Gods",
+      }),
+      new CompressionPlugin({
+        test: /\.js(\?.*)?$/i,
+        filename: "[path][query]",
+        algorithm: "gzip",
+        deleteOriginalAssets: false,
       }),
     ],
 

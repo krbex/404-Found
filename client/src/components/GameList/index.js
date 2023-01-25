@@ -13,7 +13,6 @@ export default function GameList() {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       dispatch({
         type: UPDATE_GAMES,
         products: data.games,
