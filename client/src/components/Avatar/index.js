@@ -41,26 +41,23 @@ function Avatar() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
+    <div className="profileCard">
+      <div>
+        <div>
           {imgURL && (
             <div
-              className="card border-info shadow-lg mt-5 mx-auto"
               style={{ width: "5rem" }}
             >
               <img src={imgURL} alt="dicebar" style={{ height: "5rem" }} />
             </div>
           )}
         </div>
-        <div className="col-12">
+        <div>
           <div
-            className="card shadow py-3 px-2 d-flex justify-content-center align-items-center mx-auto mt-3"
             style={{ width: "20rem" }}
           >
-            <p className="h6">Select your sprite and type anything!</p>
+            <p>Select your sprite and type anything!</p>
             <input
-              className="form-control"
               value={inputVal}
               onChange={handleInputChange}
               placeholder="Type Anything but your password!"
