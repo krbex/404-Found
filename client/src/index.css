@@ -376,3 +376,120 @@ body .navigationWrapper {
 .currentGameBlock img {
   height: 600px;
 }
+
+.container {
+  background-color: #222;
+        width: 400px;
+        height: 400px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 5px 11px 35px 2px rgba(0, 0, 0, 0.14);; 
+}
+
+.container2 {
+  background-color: #222;
+        width: 400px;
+        height: 500px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 5px 11px 35px 2px rgba(0, 0, 0, 0.14);; 
+}
+
+.error-text {
+  text-align: center;
+  color: #ea4f4c;
+}
+
+.loginForm, .signUpStl {
+  padding-top: 40px;
+}
+
+.topHeader {
+  text-align: center;
+  padding-top: 40px;
+        color: #ea4f4c;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+}
+
+.emailStl, 
+.pwdStl, 
+.fName, 
+.lName, 
+.emailStl2, 
+.pwdSU {
+   width: 76%;
+    color: #ea4f4c;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.emailStl:focus, .pwdStl:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
+  
+}
+
+.pwdStl:hover, .emailStl:hover {
+  background: rgb(125, 124, 124);
+}
+
+.sbmBtn, .lBtn {
+  cursor: pointer;
+  border-radius: 20px;
+        color: #fff;
+        background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: "Roboto", sans-serif;
+        margin-left: 35%;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.sbmBtn:hover, .lBtn:hover {
+  transition: all 0.5s ease-in-out;
+  background:linear-gradient(45deg, #b33c3a 0%, #4f0113 100%);
+}
+
+.toLogin {
+  padding-top: 40px;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+.logout {
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+}
+
+.logout:hover{
+  color: #ea4f4c;
+
+}
+
+@media (max-width: 600px) {
+  .container {
+      border-radius: 0px;
+  }
+  }

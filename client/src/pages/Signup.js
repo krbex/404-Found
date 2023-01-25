@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-import { ADD_USER } from '../utils/mutations'
+import { ADD_USER } from "../utils/mutations";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -20,7 +20,7 @@ function Signup(props) {
     });
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
-    document.location.replace('/profile');
+    document.location.replace("/profile");
   };
 
   const handleChange = (event) => {
@@ -33,54 +33,59 @@ function Signup(props) {
 
   return (
     <div className="">
-      <Link to="/login">← Go to Login</Link>
-
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+      <Link className="toLogin" to="/login">← GO TO LOGIN</Link>
+      <div className="container2">
+        <form onSubmit={handleFormSubmit}>
+          <div className="signUpStl">
+          <h2 className="topHeader">BECOME A GOD</h2>
+            <label htmlFor="firstName"></label>
+            <input
+              className="fName"
+              placeholder="First"
+              name="firstName"
+              type="firstName"
+              id="firstName"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="lastName"></label>
+            <input
+              className="lName"
+              placeholder="Last"
+              name="lastName"
+              type="lastName"
+              id="lastName"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="email"></label>
+            <input
+              className="emailStl2"
+              placeholder="youremail@test.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="pwd"></label>
+            <input
+              className="pwdSU"
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="">
+            <button className="sbmBtn" type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

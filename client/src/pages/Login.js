@@ -31,12 +31,12 @@ const Login = () => {
 
   return (
     <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className= "loginForm" onSubmit={handleFormSubmit}>
+      <h2 className="topHeader">WELCOME BACK</h2>
         <div className="emailIn">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email"></label>
           <input
-            placeholder="Enter Email"
+            className="emailStl" placeholder="Enter Email"
             name="email"
             type="email"
             id="email"
@@ -44,8 +44,9 @@ const Login = () => {
           />
         </div>
         <div className="passIn">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd"></label>
           <input
+            className="pwdStl"
             placeholder="******"
             name="password"
             type="password"
@@ -59,7 +60,7 @@ const Login = () => {
           </div>
         ) : null}
         <div className="submitBtn">
-          <button type="submit">Submit</button>
+          <button className="lBtn" type="submit">LOGIN</button>
         </div>
       </form>
     </div>

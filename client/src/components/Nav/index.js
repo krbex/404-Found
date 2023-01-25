@@ -6,7 +6,7 @@ const Nav = () => {
     if (Auth.loggedIn()) {
       return (
         <ul>
-          <a class="link" href="/" onClick={() => Auth.logout()}>
+          <a className="logout" href="/" onClick={() => Auth.logout()}>
             Logout
           </a>
         </ul>
