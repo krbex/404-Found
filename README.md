@@ -24,16 +24,22 @@
 
 ## Description
 
-
+Our project is a full stack application that allows users to browse video games and add them to their cart. Then users will be able to checkout and purchase the games.
 ## User Story
 
+AS a Gamer
+I WANT to view a gaming companies website 
+SO THAT I can buy games directly from them
 
+AS A web development student
+I WANT a tutorial explaining a specific regex
+SO THAT I can understand the search pattern the regex defines
 ## Heroku
-Please view the live application [here]()
+Please view the live application [here](https://found-404.herokuapp.com/)
 
 ## Screenshot
 
-
+![Homepage](public/info.png)
 ## Installation
 To clone the repo:
 ```
@@ -60,11 +66,6 @@ Here are the steps needed for doing that:
 - Create a new Pull Request
 
 Following a code review, your feature will be merged.
-
----
-
-## Test:
-
 
 ---
 
