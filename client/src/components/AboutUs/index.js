@@ -1,111 +1,26 @@
 import React from 'react';
 import {
-  ChakraProvider,
-  Stack,
-
-  Grid,
-  
   Box,
-  Flex,
   Text,
-  Heading,
-  IconButton,
-  Image
+  Center,
+  Heading
 } from '@chakra-ui/react';
 
-import {  ExternalLinkIcon } from '@chakra-ui/icons'
-
 const AboutUs = () => (
-  <ChakraProvider resetCSS>
-    <Grid p={10} gap={6} templateColumns="repeat(auto-fit, minmax(350px, 1fr))">
-      <Stack>
-        <Box
-          backgroundColor="#7f0909"
-          boxShadow="sm"
-          borderRadius={44}
-          pl={3}
-          pr={3}
-          pt={5}
-          pb={5}
-          color="#000000"
-        >
-          <Flex
-            display="block"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="flex-start"
-            pb={2}
-            backgroundColor="#000000"
-            borderRadius={55}
-          >
-            <Heading
-              size="lg"
-              as="h2"
-              lineHeight="shorter"
-              fontWeight="bold"
-              fontFamily="heading"
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              textAlign="center"
-              backgroundColor="#9e0000"
-              fontStyle="italic"
-              borderRadius={44}
-            >
-              About Us
-            </Heading>
-          </Flex>
-          <Stack
-            ml={4}
-            spacing={2}
-            mt={4}
-            mr={4}
-            pl={55}
-            pr={55}
-            pt={55}
-            pb={55}
-            backgroundColor="#000000"
-            borderRadius={55}
-          >
-            <Stack justifyContent="center" alignItems="center" spacing={5}>
-              <Image
-                height="100px"
-                width="100px"
-                src="https://pbs.twimg.com/profile_images/1358912925054951424/i8Ig8AUQ_400x400.jpg"
-              />
-            </Stack>
-            <Stack spacing={2}>
-              <Text
-                color="white"
-                backgroundColor="#510a0a"
-                textAlign="center"
-                fontStyle="italic"
-                fontWeight="bold"
-                letterSpacing="wide"
-                lineHeight={9}
-                borderRadius={34}
-              >
-                If you want to see the builders of this app, click below!
-              </Text>
-              <IconButton
-                aria-label="icon"
-                icon={<ExternalLinkIcon />}
-                size="lg"
-                display="block"
-                flexDirection="row"
-                justifyContent="center"
-                alignItems="center"
-                isRound
-                variant="link"
-                overflow="visible"
-                opacity={0.53}
-              />
-            </Stack>
-          </Stack>
-        </Box>
-      </Stack>
-    </Grid>
-  </ChakraProvider>
+  <Center as="section" bg="gray.100" h="50vh">
+    <Box maxW="420px" bg="black" p="6">
+      <Heading my="4" size="lg" color="white">
+        Why we Sell Games
+      </Heading>
+      <Text color="white">
+    There are many benefits to a joint design and development system. Not only
+    does it bring benefits to the design team, but it also brings benefits to
+    engineering teams. It makes sure that our experiences have a consistent look
+    and feel, not just in our design specs, but in production.
+      </Text>
+    </Box>
+
+  </Center>
 )
 
 export default AboutUs

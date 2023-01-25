@@ -9,7 +9,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%);
+  /* background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%); */
+
+  background-color: #ea4f4c;
 }
 
 body .signature {

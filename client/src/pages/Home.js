@@ -1,22 +1,13 @@
 import React from 'react';
-// import Navbar
-import Nav from '../components/Nav';
-// import GameList from '../components/GameList';
-import FooterV2 from '../components/FooterV2';
-
-
+import ButtonG from '../components/ButtonG';
 import { IntroTitle } from '../components/Intro/IntroTitle';
-
+// import AboutUs from '../components/AboutUs';
 export default function Home() {
   return (
     <div className='container'>
-    <Nav />
     <IntroTitle />
-    
-
-    
-
-   
+    {/* <AboutUs /> */}
+    <ButtonG />
     </div>
   );
 }

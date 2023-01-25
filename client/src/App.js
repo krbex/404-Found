@@ -54,7 +54,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </StoreProvider>
         {/* </div> */}
       </Router>
