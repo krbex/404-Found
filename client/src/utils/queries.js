@@ -56,3 +56,4 @@ export const QUERY_GAMES = gql`
     }
   }
 `;
+
