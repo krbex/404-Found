@@ -5,27 +5,16 @@ import UserAvatar from "../components/Avatar";
 
 import {
   ChakraProvider,
-  Center,
   Flex,
   Heading,
   Tag,
-  chakra,
   Box,
   Stack,
-  Link,
-  HStack,
   Textarea,
   Container,
-  Icon,
-  Avatar,
-  Tooltip,
-  StackProps,
-  Divider,
-  useColorModeValue,
   Text,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { AiFillGithub } from "react-icons/ai";
+
 import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
 
@@ -37,147 +26,177 @@ const Profile = () => {
 
   return (
     
-    <ChakraProvider >
+    <ChakraProvider resetCSS>
     <Flex
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
       textAlign="center"
-      mt={4}
-      backgroundColor="whiteAlpha.100"
     >
       <Flex
         display="flex"
         flexDirection="row"
-        alignItems="flex-start"
-        justifyContent="flex-start"
-        border="sm"
-        borderRadius="lg"
-        backgroundColor="#f7f3f3"
-        p={2}
-        boxShadow="lg"
-      >
-        <Heading size="lg">Welcome Gamer!</Heading>
-      </Flex>
-    </Flex>
-    <Container
-      color="blackAlpha.800"
-      mt={10}
-      backgroundColor="#f7f3f3"
-      border="md"
-      borderRadius="md"
-      boxShadow="xl"
-      opacity={1}
-      display="block"
-    >
-      <Box
-        display="flex"
-        justifyContent="center"
         alignItems="center"
-        pt={3}
-        pb={3}
+        justifyContent="center"
+        border="md"
+        borderRadius="md"
+        backgroundColor="blackAlpha.400"
+        mt={40}
       >
-        <UserAvatar
-          // size="xl"
-          // src="{generateDiceBearGridy(Math.random())}"
-          // width={200}
-        />
-      </Box>
-      <Box mt={4} color="whiteAlpha.500">
-        <Heading></Heading>
-        <Heading
-          textAlign="center"
-          fontSize="2xl"
-          backgroundColor="whiteAlpha.100"
-          color="blackAlpha.900"
-          as="h2"
-          borderRadius="md"
-          border="sm"
-          boxShadow="sm"
+        <Text
+          fontSize="3xl"
+          fontWeight="bold"
           display="flex"
           justifyContent="center"
           alignItems="center"
-          m={1}
-          size="lg"
+          p={2}
+          m={4}
+          backgroundColor="transparent"
+          border="md"
+          borderRadius="md"
         >
-          GG's {userData.firstName} {userData.lastName}
-        </Heading>
-      </Box>
-      <Box m={2} backgroundColor="whiteAlpha.100">
-        <Textarea pb={4} mb={2} />
-      </Box>
-    </Container>
+          Welcome {userData.firstName} {userData.lastName}!
+        </Text>
+      </Flex>
+      <Text
+        color="whiteAlpha.500"
+        p={3}
+        fontWeight="bold"
+        textAlign="center"
+        m={3}
+      >
+        GG's! Get gaming!
+      </Text>
+      <Stack flexDirection="column" alignItems="stretch" spacing={10}>
+        <Box
+          backgroundColor="blackAlpha.400"
+          boxShadow="2xl"
+          borderRadius="lg"
+          pl={3}
+          pr={3}
+          pt={5}
+          pb={5}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          border="md"
+        >
+          <Flex
+            display="flex"
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="center"
+            pb={2}
+            border="sm"
+            borderRadius="sm"
+          >
+            <Heading
+              size="lg"
+              as="h2"
+              lineHeight="shorter"
+              fontWeight="bold"
+              fontFamily="heading"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              {' '}
+              {userData.firstName} {userData.lastName}!
+            </Heading>
+          </Flex>
+          <UserAvatar display="flex" size="xl" m={4} />
+          <Container m={4}>
+            <Text textAlign="left">Status Message:</Text>
+            <Textarea backgroundColor="whiteAlpha.400" />
+          </Container>
+          <Container
+            m={4}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Text textAlign="center" fontSize="2xl">
+              See more of what this gamer has to show off!
+            </Text>
+          </Container>
+        </Box>
+        <Box
+          backgroundColor="blackAlpha.400"
+          borderRadius="lg"
+          boxShadow="2xl"
+          pl={3}
+          pr={3}
+          pt={5}
+          pb={5}
+          display="block"
+        >
+          <Flex
+            display="flex"
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="center"
+            border="md"
+            borderRadius="md"
+          >
+            <Text
+              display="flex"
+              justifyContent="center"
+              fontWeight="bold"
+              fontSize="4xl"
+              pb={3}
+            >
+              Godly Gamer Stuff
+            </Text>
+          </Flex>
+          <Stack spacing={4} ml={4} mt={4} alignItems="stretch">
+            <Stack spacing={2} textAlign="left">
+              <Tag
+                size="md"
+                variant="subtle"
+                colorScheme="red"
+                display="inline"
+                boxShadow="2xl"
+                alignItems="center"
+              >
+                About Me
+              </Tag>
+              <Text fontSize="md" color="gray.600"></Text>
+              <Textarea
+                border="md"
+                borderRadius="md"
+                boxShadow="2xl"
+                textAlign="left"
+                fontSize="md"
+                backgroundColor="whiteAlpha.400"
+              />
+            </Stack>
+            <Stack spacing={2} textAlign="left">
+              <Tag size="md" variant="subtle" colorScheme="yellow">
+                God Tier Games
+              </Tag>
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                m={2}
+                backgroundColor="whiteAlpha.400"
+              >
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="space-between"
+                  backgroundColor="gray.400"
+                />
+              </Flex>
+            </Stack>
+          </Stack>
+        </Box>
+      </Stack>
+    </Flex>
   </ChakraProvider>
-    
   
-
-    // <Container maxW="5xl" p={{ base: 5, md: 6 }}>
-    //   <Stack
-    //     w="18rem"
-    //     spacing={2}
-    //     p={4}
-    //     border="1px solid"
-    //     borderColor={useColorModeValue("gray.400", "gray.600")}
-    //     rounded="md"
-    //     margin="0 auto"
-    //     _hover={{
-    //       boxShadow: useColorModeValue(
-    //         "0 4px 6px rgba(160, 174, 192, 0.6)",
-    //         "0 4px 6px rgba(9, 17, 28, 0.4)"
-    //       ),
-    //     }}
-    //   >
-    //     <HStack justifyContent="space-between" alignItems="baseline">
-    //       <Tooltip
-    //         label="Austin, Texas"
-    //         aria-label="Austin, Texas"
-    //         placement="right-end"
-    //         size="sm"
-    //       >
-    //         <Box pos="relative">
-    //           <Avatar
-    //             src=""
-    //             name="Michael Harrison"
-    //             size="xl"
-    //             borderRadius="md"
-    //           />
-    //           <Avatar
-    //             src=""
-    //             name=""
-    //             size="xs"
-    //             borderRadius="full"
-    //             pos="absolute"
-    //             bottom={0}
-    //             right="-12px"
-    //           />
-    //         </Box>
-    //       </Tooltip>
-    //       <Link isExternal href="">
-    //         <Icon as={AiFillGithub} w={6} h={6} />
-    //       </Link>
-    //     </HStack>
-    //     <chakra.h1 fontSize="xl" fontWeight="bold">
-    //      {userData.firstName} {userData.lastName}
-    //     </chakra.h1>
-    //     <Text fontSize="md" color="gray.500">
-    //       {/* {userData.orders.map(order => {
-    //         return (
-    //           <div>
-    //             <h2> */}
-    //               {/* once in an array we can map through games with this ex. order.games.names*/}
-    //               {/* {orders.game}
-    //             </h2>
-    //           </div>
-    //         ) */}
-    //       {/* })} */}
-    //     </Text>
-    //     <Divider />
-    //     <Text fontSize="md" color="gray.500">
-    //       Games Owned
-    //     </Text>
-    //   </Stack>
-    // </Container>
   );
 };
 

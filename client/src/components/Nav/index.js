@@ -2,6 +2,8 @@
 import React from "react";
 import Auth from "../../utils/auth";
 
+
+
 const Nav = () => {
   function showCurrent() {
     if (Auth.loggedIn()) {

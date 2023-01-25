@@ -137,8 +137,8 @@ body .navigationWrapper {
 }
 
 .gameBlock {
-  height: 1000px;
-  margin: 0 auto;
+  height: 100px;
+  margin: 10;
   display: block;
   text-align: center;
 }
@@ -167,13 +167,16 @@ body .navigationWrapper {
 }
 
 .currentGameBlock img {
-  height: 600px;
+  height: 350px;
+  margin: 2px;
+  padding: 5px;
 }
 /* footer css */
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
+
 }
 .content-wrap {
   flex: 1;
