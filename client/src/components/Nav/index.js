@@ -1,6 +1,6 @@
-
 import React from "react";
 import Auth from "../../utils/auth";
+import { ChakraProvider, Container, Text, Link } from "@chakra-ui/react";
 
 const Nav = () => {
   function showCurrent() {
@@ -15,16 +15,12 @@ const Nav = () => {
     } else {
       return (
         <ul class="navigation">
-          <li class="parent">
-            <a class="link" href="/login">
-              Login
-            </a>
-          </li>
-          <li class="parent">
-            <a class="link" href="/signup">
-              Sign Up
-            </a>
-          </li>
+          <Link to={`/Login`} className="parent">
+            Login
+          </Link>
+          <Link to={`/Signup`} className="parent">
+            Sign Up
+          </Link>
         </ul>
       );
     }
