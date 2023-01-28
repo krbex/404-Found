@@ -2,6 +2,7 @@
   "name": "mern-client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "@chakra-ui/icon": "^3.0.15",
@@ -21,7 +22,7 @@
     "webpack": "^5.75.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --max-http-header-size=1024 start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

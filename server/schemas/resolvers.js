@@ -12,11 +12,12 @@ const resolvers = {
           $regex: name,
         };
       }
-
+      console.log(params);
       return await Game.find(params);
     },
 
     game: async (parent, { _id }) => {
+      console.log(_id);
       return await Game.findById(_id);
     },
 
@@ -24,7 +25,7 @@ const resolvers = {
       if (context.user) {
         const user = await User.findById(context.user._id);
 
-        //user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        console.log(user);
 
         return user;
       }
@@ -34,6 +35,7 @@ const resolvers = {
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id);
+        console.log(user.orders.id(_id));
 
         return user.orders.id(_id);
       }
@@ -58,7 +60,7 @@ const resolvers = {
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
         });
-
+        console.log(order);
         return order;
       }
 
@@ -67,6 +69,7 @@ const resolvers = {
 
     updateUser: async (parent, args, context) => {
       if (context.user) {
+        console.log(context.user);
         return await User.findByIdAndUpdate(context.user._id, args, {
           new: true,
         });
@@ -89,6 +92,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+      console.log(token);
 
       return { token, user };
     },
