@@ -20,20 +20,6 @@ export const ADD_USER = gql`
     }
   }
 `;
-
-export const ADD_ORDER = gql`
-  mutation AddOrder($games: [ID!]) {
-    addOrder(games: $games) {
-      games {
-        name
-        price
-        image
-        quantity
-      }
-    }
-  }
-`;
-
 export const UPDATE_USER = gql`
   mutation updateUser($user: [ID]!) {
     updateUser(user: $user) {

@@ -136,11 +136,6 @@ db.once("open", async () => {
     lastName: "Work",
     email: "HelloWorld@email.com",
     password: "password12345",
-    orders: [
-      {
-        games: [games[0]._id, games[0]._id, games[1]._id],
-      },
-    ],
   });
 
   await User.create({

@@ -7,12 +7,6 @@ export const QUERY_USERS = gql`
       firstName
       lastName
       email
-      orders {
-        games {
-          _id
-          name
-        }
-      }
     }
   }
 `;
@@ -24,12 +18,6 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
-      orders {
-        games {
-          _id
-          name
-        }
-      }
     }
   }
 `;
@@ -56,4 +44,3 @@ export const QUERY_GAMES = gql`
     }
   }
 `;
-

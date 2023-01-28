@@ -11,17 +11,10 @@ const typeDefs = gql`
     ytUrl: String
   }
 
-  type Order {
-    _id: ID
-    purchaseDate: String
-    games: [Game]
-  }
-
   type Profile {
     _id: ID
     name: String
     email: String
-
   }
 
   type User {
@@ -29,7 +22,6 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
 
     # password:
     # boughtGame1: Boolean
@@ -61,13 +53,16 @@ const typeDefs = gql`
     games: [Game]
     game(_id: ID!): Game
     user: User
-    order(_id: ID!): Order
     checkout(games: [ID!]): Checkout
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(games: [ID!]): Order
+    addUser(
+      firstName: String!
+      lastName: String!
+      email: String!
+      password: String!
+    ): Auth
     updateUser(email: String, password: String): User
 
     updateGame(_id: ID!, quantity: Int!): Game
