@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-// import Cart from "../components/Cart/index";
+import Cart from "../components/Cart/index";
 import { useStoreContext } from "../utils/GlobalState";
-import { UPDATE_GAMES } from "../utils/actions";
+import { REMOVE_FROM_CART, ADD_TO_CART, UPDATE_GAMES } from "../utils/actions";
 import { QUERY_GAMES } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
@@ -17,7 +17,7 @@ function GameDetail() {
 
   const { loading, data } = useQuery(QUERY_GAMES);
 
-  const { games } = state;
+  const { games, cart } = state;
   console.log(state);
 
   useEffect(() => {
@@ -47,38 +47,38 @@ function GameDetail() {
     }
   }, [games, data, loading, dispatch, id]);
 
-  // const addToCart = () => {
-  // 	const itemInCart = cart.find((cartItem) => cartItem._id === id);
-  // 	if (itemInCart) {
-  // 	console.log(currentGame);
-  // 	dispatch({
-  // 		type: ADD_TO_CART,
-  // 		games: { ...currentGame, purchaseQuantity: 1 },
-  // 	});
-  // 	idbPromise('cart', 'put', { ...currentGame, purchaseQuantity: 1 });
-  // 	}
-  // };
+  const addToCart = () => {
+    // const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    // if (itemInCart) {
+    console.log(currentGame);
+    dispatch({
+      type: ADD_TO_CART,
+      games: { ...currentGame, purchaseQuantity: 1 },
+    });
+    idbPromise("cart", "put", { ...currentGame, purchaseQuantity: 1 });
+    // }
+  };
 
-  //   const removeFromCart = () => {
-  //     dispatch({
-  //       type: REMOVE_FROM_CART,
-  //       _id: currentGame._id,
-  //     });
+  const removeFromCart = () => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: currentGame._id,
+    });
 
-  //     idbPromise("cart", "delete", { ...currentGame });
-  //   };
+    idbPromise("cart", "delete", { ...currentGame });
+  };
 
   return (
     <>
-      {currentGame ? (
+      {currentGame && cart ? (
         <div className="currentGameBlock">
           <Link to="/game">← Back to games</Link>
 
           <h2>{currentGame.name}</h2>
 
           <p>{currentGame.description}</p>
-          {/* <button onClick={() => addToCart()}>Add to Cart</button>
-          <button onClick={() => removeFromCart()}>Remove from Cart</button> */}
+          <button onClick={() => addToCart()}>Add to Cart</button>
+          <button onClick={() => removeFromCart()}>Remove from Cart</button>
 
           <img src={`/images/${currentGame.image}`} alt={currentGame.name} />
           <p>Trailer:</p>
@@ -98,7 +98,7 @@ function GameDetail() {
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
 
-      {/* <Cart /> */}
+      <Cart />
     </>
   );
 }
