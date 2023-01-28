@@ -13,22 +13,22 @@ import {
 } from "@chakra-ui/react";
 
 export default function GameEntry(game) {
-  const [state, dispatch] = useStoreContext();
+  // const [state, dispatch] = useStoreContext();
 
   const { image, name, _id, price, description } = game;
 
-  const { cart } = state;
+  // const { cart } = state;
 
-  const addToCart = () => {
-    const gameInCart = cart.find((cartGame) => cartGame._id === _id);
-    if (gameInCart) {
-      dispatch({
-        type: ADD_TO_CART,
-        game: { game },
-      });
-      idbPromise("cart", "put", { ...game });
-    }
-  };
+  // const addToCart = () => {
+  //   const gameInCart = cart.find((cartGame) => cartGame._id === _id);
+  //   if (gameInCart) {
+  //     dispatch({
+  //       type: ADD_TO_CART,
+  //       game: { game },
+  //     });
+  //     idbPromise("cart", "put", { ...game });
+  //   }
+  // };
 
   return (
     <ChakraProvider resetCSS>
