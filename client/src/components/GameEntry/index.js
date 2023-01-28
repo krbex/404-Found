@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_TO_CART } from "../../utils/actions";
-import { idbPromise } from "../../utils/helpers";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { ADD_TO_CART } from "../../utils/actions";
+// import { idbPromise } from "../../utils/helpers";
 import {
   ChakraProvider,
   Box,
@@ -13,22 +13,22 @@ import {
 } from "@chakra-ui/react";
 
 export default function GameEntry(game) {
-  const [state, dispatch] = useStoreContext();
+  // const [state, dispatch] = useStoreContext();
 
   const { image, name, _id, price, description } = game;
 
-  const { cart } = state;
+  // const { cart } = state;
 
-  const addToCart = () => {
-    const gameInCart = cart.find((cartGame) => cartGame._id === _id);
-    if (gameInCart) {
-      dispatch({
-        type: ADD_TO_CART,
-        game: { game },
-      });
-      idbPromise("cart", "put", { ...game });
-    }
-  };
+  // const addToCart = () => {
+  //   const gameInCart = cart.find((cartGame) => cartGame._id === _id);
+  //   if (gameInCart) {
+  //     dispatch({
+  //       type: ADD_TO_CART,
+  //       game: { game },
+  //     });
+  //     idbPromise("cart", "put", { ...game });
+  //   }
+  // };
 
   return (
     <ChakraProvider resetCSS>
@@ -62,7 +62,7 @@ export default function GameEntry(game) {
           <Text>{description}</Text>
           <Text>{price}</Text>
           <Button
-            onClick={() => addToCart()}
+            // onClick={() => addToCart()}
             variant="solid"
             size="md"
             colorScheme="red"
